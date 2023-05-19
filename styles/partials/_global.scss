@@ -1,0 +1,26 @@
+@use "./colours";
+@use "./fonts";
+
+// HEADER
+
+// NAV
+
+.nav {
+  background-color: colours.$bandsite-black;
+
+  &__header {
+    text-align: center;
+    color: colours.$primary-white;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  &__item {
+    text-align: center;
+    list-style-type: none;
+    color: colours.$primary-white;
+  }
+}

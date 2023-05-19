@@ -12,3 +12,17 @@
   font-family: "Avenir Next Bold";
   src: url("../../assets/fonts/AvenirNextLTPro-Bold.otf");
 }
+
+// Text sizing
+
+h1 {
+  font-family: "Avenir Next Bold";
+  font-size: 24px;
+  line-height: 32px;
+}
+
+h2,
+li {
+  font-family: "Avenir Next Demi";
+  font-size: 14px;
+}
