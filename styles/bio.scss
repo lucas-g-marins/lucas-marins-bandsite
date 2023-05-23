@@ -1,1 +1,55 @@
 @use "./partials/global";
+@use "./partials/colours";
+@use "./partials/fonts";
+
+// HERO
+
+.hero {
+  background-image: url("../assets/images/hero-bio.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 35vh;
+  display: flex;
+  align-items: center;
+
+  &__title {
+    color: colours.$primary-white;
+    padding-left: 1rem;
+  }
+}
+
+// About
+
+.about {
+  display: flex;
+  flex-direction: column;
+
+  &__title {
+    padding-left: 1rem;
+  }
+
+  &__image {
+    width: 90vw;
+    align-self: center;
+  }
+
+  &__quote {
+    font-size: 18px;
+    padding: 0 2rem;
+    line-height: 32px;
+  }
+
+  &__band-title {
+    font-family: "Avenir Next Regular";
+    font-size: 18px;
+    padding: 0 2rem;
+  }
+}
+
+.gallery {
+  background-color: colours.$secondary-silver;
+
+  &__title {
+    padding: 0 2rem;
+  }
+}

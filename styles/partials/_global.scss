@@ -1,16 +1,24 @@
 @use "./colours";
 @use "./fonts";
 
+body {
+  box-sizing: border-box;
+  width: 100vw;
+  margin: 0;
+}
 // HEADER
 
 // NAV
 
 .nav {
   background-color: colours.$bandsite-black;
+  width: 100vw;
 
   &__header {
     text-align: center;
     color: colours.$primary-white;
+    margin-top: 0;
+    padding-top: 1rem;
   }
 
   &__list {
