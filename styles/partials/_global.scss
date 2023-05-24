@@ -6,6 +6,7 @@ body {
   width: 100vw;
   margin: 0;
 }
+
 // HEADER
 
 // NAV
@@ -30,5 +31,10 @@ body {
     text-align: center;
     list-style-type: none;
     color: colours.$primary-white;
+    width: 50%;
+    &--active {
+      border-bottom: 2px solid #fff;
+      font-family: "Avenir Next Bold";
+    }
   }
 }

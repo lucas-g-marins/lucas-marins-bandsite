@@ -2,6 +2,10 @@
 @use "./partials/colours";
 @use "./partials/fonts";
 
+@mixin mobile-heading-padding {
+  padding: 24px 16px 16px 16px;
+}
+
 // HERO
 
 .hero {
@@ -14,7 +18,7 @@
 
   &__title {
     color: colours.$primary-white;
-    padding-left: 1rem;
+    @include mobile-heading-padding;
   }
 }
 
@@ -25,7 +29,7 @@
   flex-direction: column;
 
   &__title {
-    padding-left: 1rem;
+    @include mobile-heading-padding;
   }
 
   &__image {
@@ -35,14 +39,14 @@
 
   &__quote {
     font-size: 18px;
-    padding: 0 2rem;
+    @include mobile-heading-padding;
     line-height: 32px;
   }
 
   &__band-title {
     font-family: "Avenir Next Regular";
     font-size: 18px;
-    padding: 0 2rem;
+    @include mobile-heading-padding;
   }
 }
 
@@ -50,6 +54,62 @@
   background-color: colours.$secondary-silver;
 
   &__title {
-    padding: 0 2rem;
+    @include mobile-heading-padding;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__image {
+    width: 90vw;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+}
+
+.footer {
+  background-color: colours.$bandsite-black;
+
+  &__title {
+    color: colours.$primary-white;
+    @include mobile-heading-padding;
+    margin-top: 0;
+  }
+
+  &__social-media {
+    padding: 0 1rem;
+  }
+
+  &__icon {
+    padding-right: 1rem;
+  }
+
+  &__companies {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__copy {
+    color: colours.$primary-white;
+    padding: 0 1rem;
+    &--copyright {
+      margin-bottom: 0;
+      padding: 0 0rem 1rem 1rem;
+    }
+    &--title {
+      font-family: "Avenir Next Demi";
+    }
+  }
+
+  &__email {
+    text-decoration: none;
+  }
+
+  &__logo {
+    color: colours.$primary-white;
+    padding: 0 1rem;
   }
 }

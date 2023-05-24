@@ -26,6 +26,7 @@ h3,
 li {
   font-family: "Avenir Next Demi";
   font-size: 14px;
+  line-height: 22px;
 }
 
 p {
@@ -33,6 +34,18 @@ p {
   line-height: 18px;
   font-family: "Avenir Next Regular";
   padding: 0 2rem;
+}
+
+h4 {
+  font-family: "Avenir Next Regular";
+  font-size: 13px;
+  line-height: 18px;
+}
+
+h5 {
+  font-size: 10px;
+  line-height: 20px;
+  font-family: "Avenir Next Bold";
 }
 
 body {
@@ -59,6 +72,11 @@ body {
   text-align: center;
   list-style-type: none;
   color: #ffffff;
+  width: 50%;
+}
+.nav__item--active {
+  border-bottom: 2px solid #fff;
+  font-family: "Avenir Next Bold";
 }
 
 .hero {
@@ -71,7 +89,7 @@ body {
 }
 .hero__title {
   color: #ffffff;
-  padding-left: 1rem;
+  padding: 24px 16px 16px 16px;
 }
 
 .about {
@@ -79,7 +97,7 @@ body {
   flex-direction: column;
 }
 .about__title {
-  padding-left: 1rem;
+  padding: 24px 16px 16px 16px;
 }
 .about__image {
   width: 90vw;
@@ -87,18 +105,65 @@ body {
 }
 .about__quote {
   font-size: 18px;
-  padding: 0 2rem;
+  padding: 24px 16px 16px 16px;
   line-height: 32px;
 }
 .about__band-title {
   font-family: "Avenir Next Regular";
   font-size: 18px;
-  padding: 0 2rem;
+  padding: 24px 16px 16px 16px;
 }
 
 .gallery {
   background-color: #e1e1e1;
 }
 .gallery__title {
-  padding: 0 2rem;
+  padding: 24px 16px 16px 16px;
+}
+.gallery__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.gallery__image {
+  width: 90vw;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.footer {
+  background-color: #323232;
+}
+.footer__title {
+  color: #ffffff;
+  padding: 24px 16px 16px 16px;
+  margin-top: 0;
+}
+.footer__social-media {
+  padding: 0 1rem;
+}
+.footer__icon {
+  padding-right: 1rem;
+}
+.footer__companies {
+  display: flex;
+  flex-direction: column;
+}
+.footer__copy {
+  color: #ffffff;
+  padding: 0 1rem;
+}
+.footer__copy--copyright {
+  margin-bottom: 0;
+  padding: 0 0rem 1rem 1rem;
+}
+.footer__copy--title {
+  font-family: "Avenir Next Demi";
+}
+.footer__email {
+  text-decoration: none;
+}
+.footer__logo {
+  color: #ffffff;
+  padding: 0 1rem;
 }/*# sourceMappingURL=bio.css.map */
