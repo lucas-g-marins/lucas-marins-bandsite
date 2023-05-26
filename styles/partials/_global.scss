@@ -36,5 +36,14 @@ body {
       border-bottom: 2px solid #fff;
       font-family: "Avenir Next Bold";
     }
+    &:hover {
+      border-bottom: 2px solid #fff;
+      font-family: "Avenir Next Bold";
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+    color: colours.$primary-white;
   }
 }

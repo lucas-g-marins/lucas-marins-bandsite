@@ -78,6 +78,14 @@ body {
   border-bottom: 2px solid #fff;
   font-family: "Avenir Next Bold";
 }
+.nav__item:hover {
+  border-bottom: 2px solid #fff;
+  font-family: "Avenir Next Bold";
+}
+.nav__link {
+  text-decoration: none;
+  color: #ffffff;
+}
 
 .hero {
   background-image: url("../assets/images/hero-bio.jpg");
@@ -86,10 +94,12 @@ body {
   height: 35vh;
   display: flex;
   align-items: center;
+  opacity: 0.8;
 }
 .hero__title {
   color: #ffffff;
   padding: 1.5rem 1rem 1rem 1rem;
+  position: relative;
 }
 
 .about {

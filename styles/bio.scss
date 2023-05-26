@@ -2,8 +2,22 @@
 @use "./partials/colours";
 @use "./partials/fonts";
 
+// breakpoints
+
 @mixin mobile-heading-padding {
   padding: 1.5rem 1rem 1rem 1rem;
+}
+
+@mixin tablet {
+  @media (min-width: 768px) and (max-width: 1279px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: 1280px) {
+    @content;
+  }
 }
 
 // HERO
@@ -15,10 +29,12 @@
   height: 35vh;
   display: flex;
   align-items: center;
+  opacity: 0.8;
 
   &__title {
     color: colours.$primary-white;
     @include mobile-heading-padding;
+    position: relative;
   }
 }
 
