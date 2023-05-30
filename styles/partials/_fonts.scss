@@ -15,11 +15,63 @@
 
 // Text sizing
 
+@mixin tablet {
+  @media screen and (min-width: 768px) and (max-width: 1279px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: 1280px) {
+    @content;
+  }
+}
+// mixins for desktop and tablet font sizes
+
+@mixin page-header {
+  font-size: 3.75rem;
+  line-height: 4.25rem;
+}
+
+@mixin section-header {
+  font-size: 2.25rem;
+  line-height: 2rem;
+}
+
+@mixin subheader {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+@mixin body-copy {
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+}
+
+@mixin footer-copy {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+@mixin labels-buttons {
+  font-size: 0.75rem;
+  line-height: 1.25rem;
+}
+
 // Page Header
 h1 {
   font-family: "Avenir Next Bold";
   font-size: 24px;
   line-height: 32px;
+  @include tablet {
+    font-size: 3.75rem;
+    line-height: 4.25rem;
+  }
+
+  @include desktop {
+    font-size: 3.75rem;
+    line-height: 4.25rem;
+  }
 }
 
 // Section Header
@@ -27,6 +79,15 @@ h2 {
   font-family: "Avenir Next Bold";
   font-size: 24px;
   line-height: 32px;
+  @include tablet {
+    font-size: 2.25rem;
+    line-height: 2rem;
+  }
+
+  @include desktop {
+    font-size: 2.25rem;
+    line-height: 2rem;
+  }
 }
 
 // Subheader
@@ -35,6 +96,15 @@ li {
   font-family: "Avenir Next Demi";
   font-size: 0.875rem;
   line-height: 1.375rem;
+  @include tablet {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+  @include desktop {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
 }
 
 // body copy
@@ -58,3 +128,5 @@ h5 {
   line-height: 1.25rem;
   font-family: "Avenir Next Bold";
 }
+
+// tablet and desktop font sizes

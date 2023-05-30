@@ -7,6 +7,12 @@ body {
   margin: 0;
 }
 
+@mixin tablet {
+  @media screen and (min-width: 768px) and (max-width: 1279px) {
+    @content;
+  }
+}
+
 // HEADER
 
 // NAV
@@ -14,17 +20,29 @@ body {
 .nav {
   background-color: colours.$bandsite-black;
   width: 100vw;
+  @include tablet {
+    display: flex;
+    align-items: flex-end;
+  }
 
   &__header {
     text-align: center;
     color: colours.$primary-white;
-    margin-top: 0;
+    margin-top: auto;
     padding-top: 1rem;
+    display: flex;
+    justify-content: space-around;
+    @include tablet {
+    }
   }
 
   &__list {
     display: flex;
     justify-content: space-evenly;
+    @include tablet {
+      align-items: center;
+      width: 50%;
+    }
   }
 
   &__item {
@@ -35,10 +53,24 @@ body {
     &--active {
       border-bottom: 2px solid #fff;
       font-family: "Avenir Next Bold";
+      @include tablet {
+        border-bottom: 0;
+        text-decoration: underline;
+        text-underline-offset: 1.5rem;
+      }
     }
     &:hover {
       border-bottom: 2px solid #fff;
       font-family: "Avenir Next Bold";
+      @include tablet {
+        border-bottom: 0;
+        text-decoration: underline;
+        text-underline-offset: 1.5rem;
+      }
+    }
+    @include tablet {
+      font-size: 1.25rem;
+      padding: 0 0 1rem 0;
     }
   }
 
