@@ -99,6 +99,19 @@ body {
     font-size: 1.125rem;
     @include mobile-heading-padding;
   }
+
+  &__text-container {
+    @include tablet {
+      column-count: 2;
+      margin: 0;
+    }
+  }
+
+  &__description {
+    @include tablet {
+      margin: 0;
+    }
+  }
 }
 
 // Photo Gallery
