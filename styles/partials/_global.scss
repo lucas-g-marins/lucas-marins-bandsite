@@ -3,8 +3,12 @@
 
 body {
   box-sizing: border-box;
-  width: 100vw;
+  width: 100%;
   margin: 0;
+}
+
+@mixin mobile-heading-padding {
+  padding: 1.5rem 1rem 1rem 1rem;
 }
 
 @mixin tablet {
@@ -19,7 +23,8 @@ body {
 
 .nav {
   background-color: colours.$bandsite-black;
-  width: 100vw;
+  width: 100%;
+  margin: 0;
   @include tablet {
     display: flex;
     align-items: flex-end;
@@ -32,6 +37,7 @@ body {
     padding-top: 1rem;
     display: flex;
     justify-content: space-around;
+    @include mobile-heading-padding;
     @include tablet {
     }
   }

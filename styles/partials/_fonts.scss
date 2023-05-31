@@ -13,6 +13,11 @@
   src: url("../../assets/fonts/AvenirNextLTPro-Bold.otf");
 }
 
+body {
+  margin: 0;
+  box-sizing: border-box;
+}
+
 // Text sizing
 
 @mixin tablet {

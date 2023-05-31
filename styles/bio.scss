@@ -25,17 +25,22 @@
   line-height: 4.25rem;
 }
 
+body {
+  margin: 0;
+  box-sizing: border-box;
+}
+
 // HERO
 
 .hero {
-  // background-image: url("../assets/images/hero-bio.jpg");
   background-position: center;
   background-size: cover;
   height: 35vh;
   display: flex;
   align-items: center;
-  // opacity: 0.5;
   background-color: rgba($color: colours.$bandsite-black, $alpha: 0.5);
+  width: 100%;
+  margin: 0;
 
   @include tablet {
     height: 50vh;
@@ -71,6 +76,8 @@
 .about {
   display: flex;
   flex-direction: column;
+  width: 100%;
+  margin: 0;
 
   &__title {
     @include mobile-heading-padding;
@@ -98,6 +105,8 @@
 
 .gallery {
   background-color: colours.$secondary-silver;
+  width: 100%;
+  margin: 0;
 
   &__title {
     @include mobile-heading-padding;
@@ -130,11 +139,23 @@
 
 .footer {
   background-color: colours.$bandsite-black;
+  width: 100%;
+  margin: 0;
+
+  &__title-container {
+    @include tablet {
+      display: flex;
+      align-items: center;
+    }
+  }
 
   &__title {
     color: colours.$primary-white;
     @include mobile-heading-padding;
     margin-top: 0;
+    @include tablet {
+      margin-top: 1rem;
+    }
   }
 
   &__social-media {
@@ -143,11 +164,25 @@
 
   &__icon {
     padding-right: 1rem;
+    width: 2rem;
+    height: 2rem;
+  }
+
+  &__top-logo {
+    display: none;
+    color: colours.$primary-white;
+    @include tablet {
+      display: contents;
+    }
   }
 
   &__companies {
     display: flex;
     flex-direction: column;
+    @include tablet {
+      flex-direction: row;
+      justify-content: flex-start;
+    }
   }
 
   &__copy {
@@ -160,6 +195,9 @@
     &--title {
       font-family: "Avenir Next Demi";
     }
+    @include tablet {
+      font-size: 1rem;
+    }
   }
 
   &__email {
@@ -169,5 +207,8 @@
   &__logo {
     color: colours.$primary-white;
     padding: 0 1rem;
+    @include tablet {
+      display: none;
+    }
   }
 }
