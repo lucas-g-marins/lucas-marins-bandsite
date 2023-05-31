@@ -37,6 +37,7 @@ body {
     padding-top: 1rem;
     display: flex;
     justify-content: space-around;
+    margin: 0;
     @include mobile-heading-padding;
     @include tablet {
     }
