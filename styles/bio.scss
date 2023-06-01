@@ -2,11 +2,17 @@
 @use "./partials/colours";
 @use "./partials/fonts";
 
-// breakpoints
+// Padding
 
 @mixin mobile-heading-padding {
   padding: 1.5rem 1rem 1rem 1rem;
 }
+
+@mixin desktop-tablet-heading-padding {
+  padding: 3rem 2.25rem 2.25rem 2.25rem;
+}
+
+// breakpoints
 
 @mixin tablet {
   @media screen and (min-width: 768px) and (max-width: 1279px) {
@@ -43,17 +49,24 @@ body {
   margin: 0;
 
   @include tablet {
-    height: 50vh;
+    height: 60vh;
   }
 
   @include desktop {
-    height: 50vh;
+    height: 70vh;
   }
 
   &__title {
     color: colours.$primary-white;
     @include mobile-heading-padding;
     position: relative;
+    @include tablet {
+      @include desktop-tablet-heading-padding;
+    }
+
+    @include desktop {
+      @include desktop-tablet-heading-padding;
+    }
   }
 
   &__image {
@@ -63,11 +76,11 @@ body {
     z-index: -10;
 
     @include tablet {
-      height: 50vh;
+      height: 60vh;
     }
 
     @include desktop {
-      height: 50vh;
+      height: 70vh;
     }
   }
 }
@@ -81,6 +94,14 @@ body {
 
   &__title {
     @include mobile-heading-padding;
+
+    @include tablet {
+      @include desktop-tablet-heading-padding;
+    }
+
+    @include desktop {
+      @include desktop-tablet-heading-padding;
+    }
   }
 
   &__image {
@@ -92,12 +113,36 @@ body {
     font-size: 1.125rem;
     @include mobile-heading-padding;
     line-height: 2rem;
+
+    &--person {
+      font-size: 1.15rem;
+    }
+
+    @include tablet {
+      @include desktop-tablet-heading-padding;
+      font-size: 1.5rem;
+    }
+
+    @include desktop {
+      @include desktop-tablet-heading-padding;
+      font-size: 1.5rem;
+    }
   }
 
   &__band-title {
     font-family: "Avenir Next Regular";
     font-size: 1.125rem;
     @include mobile-heading-padding;
+
+    @include tablet {
+      padding: 1rem 2.25rem 1rem 2.25rem;
+      font-size: 2rem;
+    }
+
+    @include desktop {
+      padding: 1rem 2.25rem 1rem 2.25rem;
+      font-size: 2rem;
+    }
   }
 
   &__text-container {
@@ -105,10 +150,19 @@ body {
       column-count: 2;
       margin: 0;
     }
+
+    @include desktop {
+      column-count: 2;
+      margin: 0;
+    }
   }
 
   &__description {
     @include tablet {
+      margin: 0;
+    }
+
+    @include desktop {
       margin: 0;
     }
   }
@@ -123,6 +177,14 @@ body {
 
   &__title {
     @include mobile-heading-padding;
+
+    @include tablet {
+      @include desktop-tablet-heading-padding;
+    }
+
+    @include desktop {
+      @include desktop-tablet-heading-padding;
+    }
   }
 
   &__container {
@@ -131,6 +193,12 @@ body {
     align-items: center;
 
     @include tablet {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+    }
+
+    @include desktop {
       flex-direction: row;
       flex-wrap: wrap;
       justify-content: space-evenly;
@@ -145,6 +213,10 @@ body {
     @include tablet {
       width: 17rem;
     }
+
+    @include desktop {
+      width: 25rem;
+    }
   }
 }
 
@@ -155,8 +227,23 @@ body {
   width: 100%;
   margin: 0;
 
+  &__container {
+    @include tablet {
+      padding-left: 2.25rem;
+    }
+
+    @include desktop {
+      padding-left: 2.25rem;
+    }
+  }
+
   &__title-container {
     @include tablet {
+      display: flex;
+      align-items: center;
+    }
+
+    @include desktop {
       display: flex;
       align-items: center;
     }
@@ -168,6 +255,12 @@ body {
     margin-top: 0;
     @include tablet {
       margin-top: 1rem;
+      padding-left: 0;
+    }
+
+    @include desktop {
+      margin-top: 1rem;
+      padding-left: 0;
     }
   }
 
@@ -181,10 +274,19 @@ body {
     height: 2rem;
   }
 
+  &__logo-container {
+    margin: auto;
+  }
+
   &__top-logo {
     display: none;
     color: colours.$primary-white;
+    padding-left: 50px;
     @include tablet {
+      display: contents;
+    }
+
+    @include desktop {
       display: contents;
     }
   }
@@ -193,6 +295,11 @@ body {
     display: flex;
     flex-direction: column;
     @include tablet {
+      flex-direction: row;
+      justify-content: flex-start;
+    }
+
+    @include desktop {
       flex-direction: row;
       justify-content: flex-start;
     }
@@ -210,6 +317,12 @@ body {
     }
     @include tablet {
       font-size: 1rem;
+      padding: 0 2rem 0 0;
+    }
+
+    @include desktop {
+      font-size: 1rem;
+      padding: 0 2rem 0 0;
     }
   }
 
@@ -221,6 +334,10 @@ body {
     color: colours.$primary-white;
     padding: 0 1rem;
     @include tablet {
+      display: none;
+    }
+
+    @include desktop {
       display: none;
     }
   }
