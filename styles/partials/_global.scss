@@ -7,17 +7,23 @@ body {
   margin: 0;
 }
 
+// mixins
+
+// mixins for padding
+
 @mixin mobile-heading-padding {
   padding: 1.5rem 1rem 1rem 1rem;
 }
 
 @mixin desktop-heading-padding {
-  padding: 3rem 2.25rem 2.25rem 5.25rem;
+  padding: 3rem 2.25rem 2.25rem 6rem;
 }
 
 @mixin tablet-heading-padding {
   padding: 3rem 2.25rem 2.25rem 2.25rem;
 }
+
+// mixins for breakpoints
 
 @mixin tablet {
   @media screen and (min-width: 768px) and (max-width: 1279px) {
@@ -86,6 +92,7 @@ body {
     list-style-type: none;
     color: colours.$primary-white;
     width: 50%;
+    padding-bottom: 0.5rem;
     &--active {
       border-bottom: 2px solid #fff;
       font-family: "Avenir Next Bold";
@@ -136,12 +143,152 @@ body {
     text-decoration: none;
     color: colours.$primary-white;
 
+    &--page {
+      @include tablet {
+        padding-bottom: 1.25rem;
+      }
+
+      @include desktop {
+        padding-bottom: 1.25rem;
+      }
+    }
+  }
+}
+
+// footer
+
+.footer {
+  background-color: colours.$bandsite-black;
+  width: 100%;
+  margin: 0;
+
+  &__container {
     @include tablet {
-      padding-bottom: 1.25rem;
+      padding-left: 2.25rem;
     }
 
     @include desktop {
-      padding-bottom: 1.25rem;
+      padding-left: 5rem;
+    }
+  }
+
+  &__title-container {
+    @include tablet {
+      display: flex;
+      align-items: center;
+    }
+
+    @include desktop {
+      display: flex;
+      align-items: center;
+      padding-top: 1rem;
+    }
+  }
+
+  &__title {
+    color: colours.$primary-white;
+    @include mobile-heading-padding;
+    margin-top: 0;
+    @include tablet {
+      margin-top: 1rem;
+      padding-left: 0;
+    }
+
+    @include desktop {
+      margin-top: 1rem;
+      padding-left: 0;
+    }
+  }
+
+  &__social-media {
+    padding: 0 1rem;
+    @include tablet {
+      display: flex;
+      justify-content: space-evenly;
+    }
+
+    @include desktop {
+      padding: 0 3rem;
+    }
+  }
+
+  &__icon {
+    padding-right: 1rem;
+    width: 2rem;
+    height: 2rem;
+
+    @include tablet {
+      padding: 0;
+      margin: 0;
+    }
+  }
+
+  &__logo-container {
+    margin: auto;
+  }
+
+  &__top-logo {
+    display: none;
+    color: colours.$primary-white;
+    padding-left: 50px;
+    @include tablet {
+      display: contents;
+    }
+
+    @include desktop {
+      display: contents;
+    }
+  }
+
+  &__companies {
+    display: flex;
+    flex-direction: column;
+    @include tablet {
+      flex-direction: row;
+      justify-content: flex-start;
+    }
+
+    @include desktop {
+      flex-direction: row;
+      justify-content: space-between;
+      width: 50%;
+    }
+  }
+
+  &__copy {
+    color: colours.$primary-white;
+    padding: 0 1rem;
+    &--copyright {
+      margin-bottom: 0;
+      padding: 0 0rem 1rem 1rem;
+    }
+    &--title {
+      font-family: "Avenir Next Bold";
+    }
+    @include tablet {
+      font-size: 1rem;
+      padding: 0 2rem 0 0;
+    }
+
+    @include desktop {
+      font-size: 1rem;
+      padding: 0 3rem 1rem 0;
+    }
+  }
+
+  &__email {
+    text-decoration: none;
+  }
+
+  &__logo {
+    color: colours.$primary-white;
+    padding: 0 1rem;
+    @include tablet {
+      display: none;
+    }
+
+    @include desktop {
+      display: none;
     }
   }
 }
