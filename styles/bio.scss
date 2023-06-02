@@ -8,7 +8,11 @@
   padding: 1.5rem 1rem 1rem 1rem;
 }
 
-@mixin desktop-tablet-heading-padding {
+@mixin desktop-heading-padding {
+  padding: 3rem 2.25rem 2.25rem 5.25rem;
+}
+
+@mixin tablet-heading-padding {
   padding: 3rem 2.25rem 2.25rem 2.25rem;
 }
 
@@ -49,11 +53,11 @@ body {
   margin: 0;
 
   @include tablet {
-    height: 60vh;
+    height: 65vh;
   }
 
   @include desktop {
-    height: 70vh;
+    height: 85vh;
   }
 
   &__title {
@@ -61,11 +65,12 @@ body {
     @include mobile-heading-padding;
     position: relative;
     @include tablet {
-      @include desktop-tablet-heading-padding;
+      @include tablet-heading-padding;
     }
 
     @include desktop {
-      @include desktop-tablet-heading-padding;
+      @include desktop-heading-padding;
+      font-size: 4.25rem;
     }
   }
 
@@ -76,11 +81,11 @@ body {
     z-index: -10;
 
     @include tablet {
-      height: 60vh;
+      height: 65vh;
     }
 
     @include desktop {
-      height: 70vh;
+      height: 85vh;
     }
   }
 }
@@ -96,17 +101,27 @@ body {
     @include mobile-heading-padding;
 
     @include tablet {
-      @include desktop-tablet-heading-padding;
+      @include tablet-heading-padding;
     }
 
     @include desktop {
-      @include desktop-tablet-heading-padding;
+      @include desktop-heading-padding;
     }
   }
 
   &__image {
     width: 90vw;
     align-self: center;
+
+    @include tablet {
+      width: 80vw;
+      height: 50vh;
+    }
+
+    @include desktop {
+      width: 65vw;
+      height: 75vh;
+    }
   }
 
   &__quote {
@@ -119,13 +134,15 @@ body {
     }
 
     @include tablet {
-      @include desktop-tablet-heading-padding;
       font-size: 1.5rem;
+      margin: auto;
+      width: 80vw;
     }
 
     @include desktop {
-      @include desktop-tablet-heading-padding;
       font-size: 1.5rem;
+      margin: auto;
+      width: 65vw;
     }
   }
 
@@ -137,33 +154,42 @@ body {
     @include tablet {
       padding: 1rem 2.25rem 1rem 2.25rem;
       font-size: 2rem;
+      width: 80vw;
+      margin: auto;
     }
 
     @include desktop {
-      padding: 1rem 2.25rem 1rem 2.25rem;
+      padding: 3rem 0 2rem 0;
       font-size: 2rem;
+      width: 65vw;
+      margin: auto;
     }
   }
 
   &__text-container {
     @include tablet {
       column-count: 2;
-      margin: 0;
+      margin: auto;
+      width: 87vw;
     }
 
     @include desktop {
       column-count: 2;
-      margin: 0;
+      margin: auto;
+      width: 68vw;
     }
   }
 
   &__description {
     @include tablet {
       margin: 0;
+      font-size: 0.9rem;
     }
 
     @include desktop {
       margin: 0;
+      font-size: 1.1rem;
+      line-height: 1.8rem;
     }
   }
 }
@@ -179,11 +205,11 @@ body {
     @include mobile-heading-padding;
 
     @include tablet {
-      @include desktop-tablet-heading-padding;
+      @include tablet-heading-padding;
     }
 
     @include desktop {
-      @include desktop-tablet-heading-padding;
+      @include desktop-heading-padding;
     }
   }
 
@@ -215,7 +241,7 @@ body {
     }
 
     @include desktop {
-      width: 25rem;
+      width: 30rem;
     }
   }
 }
@@ -233,7 +259,7 @@ body {
     }
 
     @include desktop {
-      padding-left: 2.25rem;
+      padding-left: 5rem;
     }
   }
 
@@ -266,12 +292,21 @@ body {
 
   &__social-media {
     padding: 0 1rem;
+    @include tablet {
+      display: flex;
+      justify-content: space-evenly;
+    }
   }
 
   &__icon {
     padding-right: 1rem;
     width: 2rem;
     height: 2rem;
+
+    @include tablet {
+      padding: 0;
+      margin: 0;
+    }
   }
 
   &__logo-container {
@@ -313,7 +348,7 @@ body {
       padding: 0 0rem 1rem 1rem;
     }
     &--title {
-      font-family: "Avenir Next Demi";
+      font-family: "Avenir Next Bold";
     }
     @include tablet {
       font-size: 1rem;
