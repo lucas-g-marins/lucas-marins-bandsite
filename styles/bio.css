@@ -1,14 +1,17 @@
 @font-face {
   font-family: "Avenir Next Regular";
   src: url("../../assets/fonts/AvenirNextLTPro-Regular.otf");
+  src: url("../../assets/fonts/Alternative-files/AvenirNextLTPro.ttf");
 }
 @font-face {
   font-family: "Avenir Next Demi";
   src: url("../../assets/fonts/AvenirNextLTPro-Demi.otf");
+  src: url("../../assets/fonts/Alternative-files/AvenirNextLTProDemi.ttf");
 }
 @font-face {
   font-family: "Avenir Next Bold";
   src: url("../../assets/fonts/AvenirNextLTPro-Bold.otf");
+  src: url("../../assets/fonts/Alternative-files/AvenirNextLTProBold.ttf");
 }
 body {
   margin: 0;
@@ -485,6 +488,7 @@ body {
   .footer__title-container {
     display: flex;
     align-items: center;
+    padding-top: 1rem;
   }
 }
 .footer__title {
@@ -511,6 +515,11 @@ body {
   .footer__social-media {
     display: flex;
     justify-content: space-evenly;
+  }
+}
+@media (min-width: 1280px) {
+  .footer__social-media {
+    padding: 0 3rem;
   }
 }
 .footer__icon {
@@ -578,7 +587,7 @@ body {
 @media (min-width: 1280px) {
   .footer__copy {
     font-size: 1rem;
-    padding: 0 2rem 0 0;
+    padding: 0 3rem 1rem 0;
   }
 }
 .footer__email {
