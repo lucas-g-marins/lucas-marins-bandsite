@@ -63,13 +63,17 @@ body {
     display: flex;
     justify-content: space-around;
     margin: 0;
+    font-family: "Avenir Next Demi";
+    font-size: 1.75rem;
     @include mobile-heading-padding;
     @include tablet {
       @include tablet-heading-padding;
+      font-size: 2.25rem;
     }
 
     @include desktop {
       @include desktop-heading-padding;
+      font-size: 2.25rem;
     }
   }
 
@@ -93,9 +97,10 @@ body {
     color: colours.$primary-white;
     width: 50%;
     padding-bottom: 0.5rem;
+    font-family: "Avenir Next Regular";
     &--active {
       border-bottom: 2px solid #fff;
-      font-family: "Avenir Next Bold";
+      font-family: "Avenir Next Demi";
       @include tablet {
         border-bottom: 0;
         text-decoration: underline;
@@ -189,6 +194,7 @@ body {
     color: colours.$primary-white;
     @include mobile-heading-padding;
     margin-top: 0;
+    font-family: "Avenir Next Demi";
     @include tablet {
       margin-top: 1rem;
       padding-left: 0;
@@ -208,7 +214,10 @@ body {
     }
 
     @include desktop {
-      padding: 0 3rem;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      width: 15%;
     }
   }
 
@@ -221,6 +230,13 @@ body {
       padding: 0;
       margin: 0;
     }
+
+    @include desktop {
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: row;
+    }
   }
 
   &__logo-container {
@@ -231,6 +247,7 @@ body {
     display: none;
     color: colours.$primary-white;
     padding-left: 50px;
+    font-family: "Avenir Next Regular";
     @include tablet {
       display: contents;
     }
@@ -251,19 +268,20 @@ body {
     @include desktop {
       flex-direction: row;
       justify-content: space-between;
-      width: 50%;
+      width: 60%;
     }
   }
 
   &__copy {
-    color: colours.$primary-white;
+    color: colours.$secondary-white;
     padding: 0 1rem;
     &--copyright {
       margin-bottom: 0;
       padding: 0 0rem 1rem 1rem;
     }
     &--title {
-      font-family: "Avenir Next Bold";
+      font-family: "Avenir Next Demi";
+      color: colours.$primary-white;
     }
     @include tablet {
       font-size: 1rem;
@@ -272,7 +290,6 @@ body {
 
     @include desktop {
       font-size: 1rem;
-      padding: 0 3rem 1rem 0;
     }
   }
 
@@ -283,6 +300,7 @@ body {
   &__logo {
     color: colours.$primary-white;
     padding: 0 1rem;
+    font-family: "Avenir Next Regular";
     @include tablet {
       display: none;
     }

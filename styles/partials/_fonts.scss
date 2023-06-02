@@ -69,8 +69,8 @@ body {
 // Page Header
 h1 {
   font-family: "Avenir Next Bold";
-  font-size: 24px;
-  line-height: 32px;
+  font-size: 2rem;
+  line-height: 2rem;
   @include tablet {
     font-size: 3.75rem;
     line-height: 4.25rem;
@@ -85,8 +85,8 @@ h1 {
 // Section Header
 h2 {
   font-family: "Avenir Next Bold";
-  font-size: 24px;
-  line-height: 32px;
+  font-size: 2rem;
+  line-height: 2rem;
   @include tablet {
     font-size: 2.25rem;
     line-height: 2rem;
@@ -102,7 +102,7 @@ h2 {
 h3,
 li {
   font-family: "Avenir Next Demi";
-  font-size: 0.875rem;
+  font-size: 1rem;
   line-height: 1.375rem;
   @include tablet {
     font-size: 1.5rem;
