@@ -205,7 +205,7 @@ body {
 }
 .nav__item:hover {
   border-bottom: 2px solid #fff;
-  font-family: "Avenir Next Bold";
+  font-family: "Avenir Next Demi";
 }
 @media screen and (min-width: 768px) and (max-width: 1279px) {
   .nav__item:hover {
