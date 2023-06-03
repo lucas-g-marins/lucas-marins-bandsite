@@ -207,19 +207,21 @@ body {
   }
 
   &__social-media {
-    padding: 0 1rem;
+    padding: 0.5rem 1rem;
     display: flex;
     justify-content: space-between;
     width: 35%;
     @include tablet {
       justify-content: space-between;
       width: 15%;
+      padding: 0;
     }
 
     @include desktop {
       flex-direction: row;
       justify-content: space-evenly;
       width: 15%;
+      padding: 0;
     }
   }
 
