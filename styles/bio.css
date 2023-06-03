@@ -266,20 +266,20 @@ body {
 @media screen and (min-width: 768px) and (max-width: 1279px) {
   .footer__title-container {
     display: flex;
-    align-items: center;
+    align-items: baseline;
   }
 }
 @media (min-width: 1280px) {
   .footer__title-container {
     display: flex;
-    align-items: center;
+    align-items: baseline;
     padding-top: 1rem;
   }
 }
 .footer__title {
   color: #ffffff;
   padding: 1.5rem 1rem 1rem 1rem;
-  margin-top: 0;
+  margin: 0;
   font-family: "Avenir Next Demi";
 }
 @media screen and (min-width: 768px) and (max-width: 1279px) {
@@ -296,23 +296,25 @@ body {
 }
 .footer__social-media {
   padding: 0 1rem;
+  display: flex;
+  justify-content: space-between;
+  width: 35%;
 }
 @media screen and (min-width: 768px) and (max-width: 1279px) {
   .footer__social-media {
-    display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    width: 15%;
   }
 }
 @media (min-width: 1280px) {
   .footer__social-media {
-    display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     width: 15%;
   }
 }
 .footer__icon {
-  padding-right: 1rem;
+  display: flex;
   width: 2rem;
   height: 2rem;
 }

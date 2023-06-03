@@ -180,12 +180,12 @@ body {
   &__title-container {
     @include tablet {
       display: flex;
-      align-items: center;
+      align-items: baseline;
     }
 
     @include desktop {
       display: flex;
-      align-items: center;
+      align-items: baseline;
       padding-top: 1rem;
     }
   }
@@ -193,7 +193,7 @@ body {
   &__title {
     color: colours.$primary-white;
     @include mobile-heading-padding;
-    margin-top: 0;
+    margin: 0;
     font-family: "Avenir Next Demi";
     @include tablet {
       margin-top: 1rem;
@@ -208,13 +208,15 @@ body {
 
   &__social-media {
     padding: 0 1rem;
+    display: flex;
+    justify-content: space-between;
+    width: 35%;
     @include tablet {
-      display: flex;
-      justify-content: space-evenly;
+      justify-content: space-between;
+      width: 15%;
     }
 
     @include desktop {
-      display: flex;
       flex-direction: row;
       justify-content: space-evenly;
       width: 15%;
@@ -222,7 +224,7 @@ body {
   }
 
   &__icon {
-    padding-right: 1rem;
+    display: flex;
     width: 2rem;
     height: 2rem;
 
