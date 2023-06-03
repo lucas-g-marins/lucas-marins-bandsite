@@ -1,17 +1,15 @@
 @font-face {
   font-family: "Avenir Next Regular";
-  src: url("../../assets/fonts/AvenirNextLTPro-Regular.otf");
-  src: url("../../assets/fonts/Alternative-files/AvenirNextLTPro.ttf");
+  src: url("../assets/fonts/AvenirNextLTPro-Regular.otf") format("opentype"), url("../assets/fonts/Alternative-files/AvenirNextLTPro.ttf") format("truetype");
 }
 @font-face {
   font-family: "Avenir Next Demi";
-  src: url("../../assets/fonts/AvenirNextLTPro-Demi.otf");
-  src: url("../../assets/fonts/Alternative-files/AvenirNextLTProDemi.ttf");
+  src: url("../assets/fonts/AvenirNextLTPro-Demi.otf") format("opentype");
+  src: url("../assets/fonts/Alternative-files/AvenirNextLTProDemi.ttf") format("truetype");
 }
 @font-face {
   font-family: "Avenir Next Bold";
-  src: url("../../assets/fonts/AvenirNextLTPro-Bold.otf");
-  src: url("../../assets/fonts/Alternative-files/AvenirNextLTProBold.ttf");
+  src: url("../assets/fonts/Alternative-files/AvenirNextLTPro-Bold.woff2") format("woff2"), url("../assets/fonts/Alternative-files/AvenirNextLTPro-Bold.woff") format("woff"), url("../assets/fonts/AvenirNextLTPro-Bold.otf") format("opentype"), url("../assets/fonts/Alternative-files/AvenirNextLTProBold.ttf") format("truetype");
 }
 body {
   margin: 0;
@@ -389,6 +387,7 @@ body {
 @media (min-width: 1280px) {
   .footer__copy {
     font-size: 1rem;
+    padding-left: 0;
   }
 }
 .footer__email {
