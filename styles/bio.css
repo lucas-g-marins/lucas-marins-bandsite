@@ -532,7 +532,8 @@ body {
 .about__band-title {
   font-family: "Avenir Next Regular";
   font-size: 1.125rem;
-  padding: 1.5rem 1rem 1rem 1rem;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  margin: 0rem 0rem;
 }
 @media screen and (min-width: 768px) and (max-width: 1279px) {
   .about__band-title {
@@ -555,7 +556,7 @@ body {
     -moz-column-count: 2;
          column-count: 2;
     margin: auto;
-    width: 87vw;
+    width: 83vw;
   }
 }
 @media (min-width: 1280px) {
@@ -563,12 +564,13 @@ body {
     -moz-column-count: 2;
          column-count: 2;
     margin: auto;
-    width: 68vw;
+    width: 67vw;
   }
 }
 .about__description {
   font-size: 1rem;
-  line-height: 1.25rem;
+  line-height: 1.5rem;
+  padding: 0rem 1rem;
 }
 @media screen and (min-width: 768px) and (max-width: 1279px) {
   .about__description {

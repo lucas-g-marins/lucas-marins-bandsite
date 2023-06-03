@@ -153,8 +153,8 @@ body {
   &__band-title {
     font-family: "Avenir Next Regular";
     font-size: 1.125rem;
-    @include mobile-heading-padding;
-
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    margin: 0rem 0rem;
     @include tablet {
       padding: 1rem 2.25rem 1rem 2.25rem;
       font-size: 2rem;
@@ -174,23 +174,23 @@ body {
     @include tablet {
       column-count: 2;
       margin: auto;
-      width: 87vw;
+      width: 83vw;
     }
 
     @include desktop {
       column-count: 2;
       margin: auto;
-      width: 68vw;
+      width: 67vw;
     }
   }
 
   &__description {
     font-size: 1rem;
-    line-height: 1.25rem;
+    line-height: 1.5rem;
+    padding: 0rem 1rem;
 
     @include tablet {
       margin: 0;
-      // font-size: 0.9rem;
     }
 
     @include desktop {
