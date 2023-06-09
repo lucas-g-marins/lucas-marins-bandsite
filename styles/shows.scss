@@ -1,3 +1,100 @@
 @use "./partials/global";
 @use "./partials/colours";
 @use "./partials/fonts";
+
+// breakpoints
+
+@mixin tablet {
+  @media screen and (min-width: 768px) and (max-width: 1279px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: 1280px) {
+    @content;
+  }
+}
+
+// PADDING
+
+@mixin mobile-heading-padding {
+  padding: 1.5rem 1rem 1rem 1rem;
+}
+
+@mixin desktop-heading-padding {
+  padding: 3rem 2.25rem 2.25rem 6rem;
+}
+
+@mixin tablet-heading-padding {
+  padding: 3rem 2.25rem 2.25rem 2.25rem;
+}
+
+// HERO
+
+.hero {
+  background-position: center;
+  background-size: cover;
+  height: 45vh;
+  display: flex;
+  align-items: center;
+  background-color: rgba($color: colours.$bandsite-black, $alpha: 0.5);
+  width: 100%;
+  margin: 0;
+
+  @include tablet {
+    height: 65vh;
+  }
+
+  @include desktop {
+    height: 85vh;
+  }
+
+  &__content {
+    width: 100%;
+  }
+
+  &__album-title {
+    @include mobile-heading-padding;
+    color: colours.$primary-white;
+  }
+
+  &__title {
+    color: colours.$primary-white;
+    @include mobile-heading-padding;
+    position: relative;
+    font-size: 2rem;
+    font-family: "Avenir Next Demi";
+
+    @include tablet {
+      @include tablet-heading-padding;
+      font-size: 3.75rem;
+    }
+
+    @include desktop {
+      @include desktop-heading-padding;
+      font-size: 4.25rem;
+    }
+  }
+
+  &__soundcloud {
+    height: 10rem;
+    width: 80%;
+    padding-left: 1rem;
+  }
+
+  &__image {
+    position: absolute;
+    width: 100%;
+    height: 45vh;
+    z-index: -10;
+
+    @include tablet {
+      height: 65vh;
+    }
+
+    @include desktop {
+      height: 85vh;
+    }
+  }
+}
