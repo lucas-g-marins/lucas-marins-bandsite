@@ -460,8 +460,8 @@ body {
   }
 }
 .hero__soundcloud {
-  height: 10rem;
-  width: 80%;
+  height: 8rem;
+  width: 90%;
   padding-left: 1rem;
 }
 .hero__image {
@@ -479,4 +479,8 @@ body {
   .hero__image {
     height: 85vh;
   }
+}
+
+.shows__title {
+  padding: 1.5rem 1rem 1rem 1rem;
 }/*# sourceMappingURL=shows.css.map */

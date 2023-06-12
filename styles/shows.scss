@@ -78,8 +78,8 @@
   }
 
   &__soundcloud {
-    height: 10rem;
-    width: 80%;
+    height: 8rem;
+    width: 90%;
     padding-left: 1rem;
   }
 
@@ -96,5 +96,11 @@
     @include desktop {
       height: 85vh;
     }
+  }
+}
+
+.shows {
+  &__title {
+    @include mobile-heading-padding;
   }
 }
