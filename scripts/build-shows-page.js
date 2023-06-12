@@ -32,3 +32,29 @@ let shows = [
     Location: "San Francisco, CA",
   },
 ];
+
+// loop for adding in shows
+
+for (let i = 0; i < shows.length; i++) {
+  // create div
+  let newDiv = document.createElement("div");
+  newDiv.classList.add("shows__card");
+
+  let findContainer = document.querySelector(".shows__container");
+  findContainer.appendChild(newDiv);
+
+  // create p tag for date
+  let dateP = document.createElement("p");
+  dateP.classList.add("shows__date-title");
+  dateP.innerText = "Date";
+
+  newDiv.appendChild(dateP);
+
+  //  create dynamic show date
+
+  let showDate = document.createElement("h3");
+  showDate.classList.add("shows__date");
+  showDate.innerText = shows[i].Date;
+
+  newDiv.appendChild(showDate);
+}
