@@ -57,4 +57,44 @@ for (let i = 0; i < shows.length; i++) {
   showDate.innerText = shows[i].Date;
 
   newDiv.appendChild(showDate);
+
+  // create p tag for venue
+
+  let venue = document.createElement("p");
+  venue.classList.add("shows__venue-title");
+  venue.innerText = "Venue";
+
+  newDiv.appendChild(venue);
+
+  // create dynamic venue
+
+  let showVenue = document.createElement("h3");
+  showVenue.classList.add("shows__venue");
+  showVenue.innerText = shows[i].Venue;
+
+  newDiv.appendChild(showVenue);
+
+  // create p tag for location
+
+  let location = document.createElement("p");
+  location.classList.add("shows__location-title");
+  location.innerText = "Location";
+
+  newDiv.appendChild(location);
+
+  // create dynamic location
+
+  let showLocation = document.createElement("h3");
+  showLocation.classList.add("shows__location");
+  showLocation.innerText = shows[i].Location;
+
+  newDiv.appendChild(showLocation);
+
+  // create button for tickets
+
+  let ticketButton = document.createElement("button");
+  ticketButton.classList.add("shows__tickets");
+  ticketButton.innerText = "Buy Tickets";
+
+  newDiv.appendChild(ticketButton);
 }
