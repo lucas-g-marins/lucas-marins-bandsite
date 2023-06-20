@@ -1,29 +1,42 @@
-// function createCommentSection() {
-//   // create div for comment section
-//   let main = document.querySelector("main");
-//   let conversationSection = document.createElement("div");
-//   conversationSection.classList.add("conversation");
-//   main.appendChild(conversationSection);
+// array of objects for comments
 
-//   // create title for comment section
-//   let conversationTitle = document.createElement("h2");
-//   conversationTitle.classList.add("conversation__title");
-//   conversationTitle.innerText = "Join the Conversation";
-//   conversationSection.appendChild(conversationTitle);
+let comments = [
+  {
+    name: "Connor Walton",
+    date: "02/17/2021",
+    comment:
+      "This is art. This is inexplicable magicexpressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains.",
+  },
+  {
+    name: "Emilie Beach",
+    date: "01/09/2021",
+    comment:
+      "I feel blessed to have seen them in person. What a show! They were just perfection. If there was one day of my life I could relive, this would be it. What an incredible day.",
+  },
+  {
+    name: "Miles Acosta",
+    date: "12/20/2020",
+    comment:
+      "I can t stop listening. Every time I hear one of their songs the vocals it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can t get enough.",
+  },
+];
 
-//   // create surrounding div for comment post section
-//   let commentContainer = document.createElement("div");
-//   commentContainer.classList.add("conversation__post-comment-container");
-//   conversationSection.appendChild(commentContainer);
+// pull comment
 
-//   // create profile icon for comment section
-//   let profilePicture = document.createElement("img");
-//   profilePicture.classList.add("conversation__avatar");
-//   profilePicture.src = "../assets/images/Mohan-muruge.jpg";
-//   commentContainer.appendChild(profilePicture);
+const commentForm = document.querySelector(".conversation__form");
 
-// create form for posting comment
-//   let commentForm = document.createElement()
-// }
+commentForm.addEventListener("submit", function (event) {
+  event.preventDefault();
+  //   pull name
+  const pullName = event.target.name.value;
+  console.log(pullName);
+  //   pull comment
+  const pullComment = event.target.comment.value;
+  console.log(pullComment);
+  //   push values to comments
+  const newComment = { name: pullName, comment: pullComment };
+  comments.push(newComment);
+  console.log(comments);
+});
 
-// createCommentSection();
+// post comments
