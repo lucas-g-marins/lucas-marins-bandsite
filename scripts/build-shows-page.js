@@ -45,7 +45,7 @@ for (let i = 0; i < shows.length; i++) {
 
   // create p tag for date
   let dateP = document.createElement("p");
-  dateP.classList.add("shows__date-title");
+  dateP.classList.add("shows__section-title");
   dateP.innerText = "Date";
 
   newDiv.appendChild(dateP);
@@ -61,7 +61,7 @@ for (let i = 0; i < shows.length; i++) {
   // create p tag for venue
 
   let venue = document.createElement("p");
-  venue.classList.add("shows__venue-title");
+  venue.classList.add("shows__section-title");
   venue.innerText = "Venue";
 
   newDiv.appendChild(venue);
@@ -77,7 +77,7 @@ for (let i = 0; i < shows.length; i++) {
   // create p tag for location
 
   let location = document.createElement("p");
-  location.classList.add("shows__location-title");
+  location.classList.add("shows__section-title");
   location.innerText = "Location";
 
   newDiv.appendChild(location);

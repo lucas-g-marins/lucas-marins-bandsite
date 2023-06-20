@@ -481,6 +481,9 @@ body {
   }
 }
 
-.shows__title {
+.shows {
   padding: 1.5rem 1rem 1rem 1rem;
+}
+.shows__section-title {
+  padding: 0;
 }/*# sourceMappingURL=shows.css.map */

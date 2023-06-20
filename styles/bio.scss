@@ -259,3 +259,23 @@ body {
     }
   }
 }
+
+// Join the Conversation
+
+.conversation {
+  @include mobile-heading-padding();
+
+  &__post-comment-container {
+    display: flex;
+  }
+
+  &__avatar {
+    width: 12rem;
+    border-radius: 20rem;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+  }
+}

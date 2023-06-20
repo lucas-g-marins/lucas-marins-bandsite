@@ -100,7 +100,15 @@
 }
 
 .shows {
+  @include mobile-heading-padding;
+
   &__title {
-    @include mobile-heading-padding;
+  }
+
+  &__card {
+  }
+
+  &__section-title {
+    padding: 0;
   }
 }

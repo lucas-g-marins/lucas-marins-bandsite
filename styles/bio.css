@@ -644,4 +644,19 @@ body {
   .gallery__image:hover {
     opacity: 1;
   }
+}
+
+.conversation {
+  padding: 1.5rem 1rem 1rem 1rem;
+}
+.conversation__post-comment-container {
+  display: flex;
+}
+.conversation__avatar {
+  width: 12rem;
+  border-radius: 20rem;
+}
+.conversation__form {
+  display: flex;
+  flex-direction: column;
 }/*# sourceMappingURL=bio.css.map */
