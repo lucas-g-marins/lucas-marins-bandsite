@@ -267,15 +267,32 @@ body {
 
   &__post-comment-container {
     display: flex;
+    width: 100%;
+  }
+
+  &__avatar-container {
+    width: 10%;
   }
 
   &__avatar {
-    width: 12rem;
-    border-radius: 20rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    background-color: colours.$secondary-silver;
   }
 
   &__form {
     display: flex;
     flex-direction: column;
+    width: 100%;
+    align-items: flex-start;
+  }
+
+  &__comment-container {
+    display: flex;
+  }
+
+  &__name-date-container {
+    display: flex;
   }
 }

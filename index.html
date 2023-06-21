@@ -117,13 +117,19 @@
       <div class="conversation">
         <h2 class="conversation__title">Join the Conversation</h2>
         <div class="conversation__post-comment-container">
-          <img
-            class="conversation__avatar"
-            src="./assets/images/Mohan-muruge.jpg"
-          />
+          <div class="conversation__avatar-container">
+            <img
+              class="conversation__avatar"
+              src="./assets/images/Mohan-muruge.jpg"
+            />
+          </div>
           <form class="conversation__form">
+            <label class="conversation__label">Name</label>
             <input type="text" name="name" placeholder="Enter your name" />
+
+            <label class="conversation__label">Comment</label>
             <input type="text" name="comment" placeholder="Add a new comment" />
+
             <button type="submit">COMMENT</button>
           </form>
         </div>

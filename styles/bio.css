@@ -651,12 +651,26 @@ body {
 }
 .conversation__post-comment-container {
   display: flex;
+  width: 100%;
+}
+.conversation__avatar-container {
+  width: 10%;
 }
 .conversation__avatar {
-  width: 12rem;
-  border-radius: 20rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background-color: #e1e1e1;
 }
 .conversation__form {
   display: flex;
   flex-direction: column;
+  width: 100%;
+  align-items: flex-start;
+}
+.conversation__comment-container {
+  display: flex;
+}
+.conversation__name-date-container {
+  display: flex;
 }/*# sourceMappingURL=bio.css.map */

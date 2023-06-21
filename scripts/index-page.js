@@ -33,10 +33,60 @@ commentForm.addEventListener("submit", function (event) {
   //   pull comment
   const pullComment = event.target.comment.value;
   console.log(pullComment);
-  //   push values to comments
-  const newComment = { name: pullName, comment: pullComment };
-  comments.push(newComment);
+  //   push values to comments array
+  const newComment = {
+    name: pullName,
+    date: "06/20/2023",
+    comment: pullComment,
+  };
+  comments.unshift(newComment);
   console.log(comments);
 });
 
 // post comments
+comments.forEach((comment) => {
+  // create div for comment values
+  let commentDiv = document.createElement("div");
+  commentDiv.classList.add("conversation__comment-container");
+
+  let conversationDiv = document.querySelector(".conversation");
+  conversationDiv.appendChild(commentDiv);
+
+  //   add div for avatar
+  let avatarDiv = document.createElement("div");
+  avatarDiv.classList.add("conversation__avatar-container");
+  commentDiv.appendChild(avatarDiv);
+
+  //   add avatar
+  let avatar = document.createElement("img");
+  avatar.classList.add("conversation__avatar");
+  avatarDiv.appendChild(avatar);
+
+  //   add div for name, date, and comment
+  let contentDiv = document.createElement("div");
+  contentDiv.classList.add("conversation__comment-content");
+  commentDiv.appendChild(contentDiv);
+
+  //   add div for name and date
+  let nameDateDiv = document.createElement("div");
+  nameDateDiv.classList.add("conversation__name-date-container");
+  contentDiv.appendChild(nameDateDiv);
+
+  //add name
+  let userName = document.createElement("p");
+  userName.innerText = comment.name;
+  userName.classList.add("conversation__name");
+  nameDateDiv.appendChild(userName);
+
+  // add date
+  let date = document.createElement("p");
+  date.innerText = comment.date;
+  date.classList.add("conversation__date");
+  nameDateDiv.appendChild(date);
+
+  //   add div for comment
+  let commentValue = document.createElement("p");
+  commentValue.innerText = comment.comment;
+  commentValue.classList.add("conversation__comment");
+  contentDiv.appendChild(commentValue);
+});
