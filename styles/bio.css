@@ -14,6 +14,7 @@
 body {
   margin: 0;
   box-sizing: border-box;
+  font-family: "Avenir Next Regular";
 }
 
 h1 {
@@ -246,6 +247,36 @@ body {
   .nav__link--page {
     padding-bottom: 1.25rem;
   }
+}
+
+input::-moz-placeholder {
+  color: #000000;
+  font-family: "Avenir Next Regular";
+}
+
+input::placeholder {
+  color: #000000;
+  font-family: "Avenir Next Regular";
+}
+
+textarea {
+  font-family: "Avenir Next Regular";
+}
+textarea ::-moz-placeholder {
+  color: #000000;
+}
+textarea ::placeholder {
+  color: #000000;
+}
+
+button {
+  height: 2.5rem;
+  width: 100%;
+  border-radius: 4px;
+  border: 0px;
+  color: #ffffff;
+  background-color: #323232;
+  font-family: "Avenir Next Demi";
 }
 
 .footer {
@@ -648,10 +679,17 @@ body {
 
 .conversation {
   padding: 1.5rem 1rem 1rem 1rem;
+  width: 100%;
+  margin: 0;
+  overflow-x: hidden;
+  box-sizing: border-box;
 }
 .conversation__post-comment-container {
   display: flex;
   width: 100%;
+  margin: 0;
+  border-bottom: 2px solid #e1e1e1;
+  padding-bottom: 1rem;
 }
 .conversation__avatar-container {
   width: 10%;
@@ -660,17 +698,66 @@ body {
   width: 2.5rem;
   height: 2.5rem;
   border-radius: 50%;
+  border: 0px;
   background-color: #e1e1e1;
+}
+.conversation__label {
+  color: #afafaf;
+  font-size: 0.85rem;
+}
+.conversation__input {
+  height: 2.5rem;
+  border-radius: 4px;
+  border: 1px solid #e1e1e1;
+  width: 90%;
+  padding: 0.75rem;
+  margin: 0.5rem 0;
+  background-color: #fafafa;
+  color: #000000;
+}
+.conversation__input :focus {
+  border-color: #000000;
+}
+.conversation__input--comment {
+  height: 4rem;
+}
+.conversation__button {
+  height: 2.5rem;
+  width: 100%;
+  margin: 0;
+  border-radius: 4px;
+  border: 0px;
+  color: #ffffff;
+  background-color: #323232;
+  font-family: "Avenir Next Demi";
+}
+.conversation__button:hover {
+  background-color: #000000;
 }
 .conversation__form {
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 90%;
   align-items: flex-start;
 }
 .conversation__comment-container {
   display: flex;
+  width: 100%;
+  padding-top: 1rem;
+  border-bottom: 2px solid #e1e1e1;
+}
+.conversation__comment {
+  width: 100%;
+  padding: 0;
 }
 .conversation__name-date-container {
   display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.conversation__name {
+  font-family: "Avenir Next Bold";
+}
+.conversation__date {
+  color: #afafaf;
 }/*# sourceMappingURL=bio.css.map */

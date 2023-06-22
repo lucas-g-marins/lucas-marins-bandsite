@@ -14,6 +14,7 @@
 body {
   margin: 0;
   box-sizing: border-box;
+  font-family: "Avenir Next Regular";
 }
 
 h1 {
@@ -246,6 +247,36 @@ body {
   .nav__link--page {
     padding-bottom: 1.25rem;
   }
+}
+
+input::-moz-placeholder {
+  color: #000000;
+  font-family: "Avenir Next Regular";
+}
+
+input::placeholder {
+  color: #000000;
+  font-family: "Avenir Next Regular";
+}
+
+textarea {
+  font-family: "Avenir Next Regular";
+}
+textarea ::-moz-placeholder {
+  color: #000000;
+}
+textarea ::placeholder {
+  color: #000000;
+}
+
+button {
+  height: 2.5rem;
+  width: 100%;
+  border-radius: 4px;
+  border: 0px;
+  color: #ffffff;
+  background-color: #323232;
+  font-family: "Avenir Next Demi";
 }
 
 .footer {

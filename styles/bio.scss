@@ -264,10 +264,17 @@ body {
 
 .conversation {
   @include mobile-heading-padding();
+  width: 100%;
+  margin: 0;
+  overflow-x: hidden;
+  box-sizing: border-box;
 
   &__post-comment-container {
     display: flex;
     width: 100%;
+    margin: 0;
+    border-bottom: 2px solid colours.$secondary-silver;
+    padding-bottom: 1rem;
   }
 
   &__avatar-container {
@@ -278,21 +285,77 @@ body {
     width: 2.5rem;
     height: 2.5rem;
     border-radius: 50%;
+    border: 0px;
     background-color: colours.$secondary-silver;
+  }
+
+  &__label {
+    color: colours.$primary-silver;
+    font-size: 0.85rem;
+  }
+
+  &__input {
+    height: 2.5rem;
+    border-radius: 4px;
+    border: 1px solid colours.$secondary-silver;
+    width: 90%;
+    padding: 0.75rem;
+    margin: 0.5rem 0;
+    background-color: colours.$secondary-white;
+    color: colours.$bandsite-darkblack;
+    :focus {
+      border-color: colours.$bandsite-darkblack;
+    }
+
+    &--comment {
+      height: 4rem;
+    }
+  }
+
+  &__button {
+    height: 2.5rem;
+    width: 100%;
+    margin: 0;
+    border-radius: 4px;
+    border: 0px;
+    color: colours.$primary-white;
+    background-color: colours.$bandsite-black;
+    font-family: "Avenir Next Demi";
+    &:hover {
+      background-color: colours.$bandsite-darkblack;
+    }
   }
 
   &__form {
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 90%;
     align-items: flex-start;
   }
 
   &__comment-container {
     display: flex;
+    width: 100%;
+    padding-top: 1rem;
+    border-bottom: 2px solid colours.$secondary-silver;
+  }
+
+  &__comment {
+    width: 100%;
+    padding: 0;
   }
 
   &__name-date-container {
     display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  &__name {
+    font-family: "Avenir Next Bold";
+  }
+
+  &__date {
+    color: colours.$primary-silver;
   }
 }

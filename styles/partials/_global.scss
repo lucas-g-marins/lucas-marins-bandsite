@@ -160,6 +160,32 @@ body {
   }
 }
 
+// input
+
+input::placeholder {
+  color: colours.$bandsite-darkblack;
+  font-family: "Avenir Next Regular";
+}
+
+textarea {
+  font-family: "Avenir Next Regular";
+  ::placeholder {
+    color: colours.$bandsite-darkblack;
+  }
+}
+
+// button
+
+button {
+  height: 2.5rem;
+  width: 100%;
+  border-radius: 4px;
+  border: 0px;
+  color: colours.$primary-white;
+  background-color: colours.$bandsite-black;
+  font-family: "Avenir Next Demi";
+}
+
 // footer
 
 .footer {
