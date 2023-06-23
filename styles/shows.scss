@@ -100,15 +100,46 @@
 }
 
 .shows {
-  @include mobile-heading-padding;
+  box-sizing: border-box;
 
   &__title {
+    @include mobile-heading-padding;
+  }
+
+  &__date {
+    font-family: "Avenir Next Bold";
+    padding: 0 1rem;
+    margin: 0.5rem 0;
+  }
+
+  &__venue {
+    padding: 0 1rem;
+    margin: 0.5rem 0;
+  }
+
+  &__location {
+    padding: 0 1rem;
+    margin: 0.5rem 0;
   }
 
   &__card {
+    padding-bottom: 1rem;
+    border-bottom: 2px solid colours.$secondary-silver;
+    margin-bottom: 0.75rem;
+    display: flex;
+    flex-direction: column;
   }
 
   &__section-title {
-    padding: 0;
+    padding: 0 1rem;
+    margin: 0.25rem 0;
+    color: colours.$primary-silver;
+  }
+
+  &__tickets {
+    height: 3rem;
+    font-size: 1.25rem;
+    width: 90%;
+    align-self: center;
   }
 }

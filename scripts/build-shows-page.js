@@ -94,7 +94,7 @@ for (let i = 0; i < shows.length; i++) {
 
   let ticketButton = document.createElement("button");
   ticketButton.classList.add("shows__tickets");
-  ticketButton.innerText = "Buy Tickets";
+  ticketButton.innerText = "BUY TICKETS";
 
   newDiv.appendChild(ticketButton);
 }

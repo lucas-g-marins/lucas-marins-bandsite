@@ -513,8 +513,39 @@ button {
 }
 
 .shows {
+  box-sizing: border-box;
+}
+.shows__title {
   padding: 1.5rem 1rem 1rem 1rem;
 }
+.shows__date {
+  font-family: "Avenir Next Bold";
+  padding: 0 1rem;
+  margin: 0.5rem 0;
+}
+.shows__venue {
+  padding: 0 1rem;
+  margin: 0.5rem 0;
+}
+.shows__location {
+  padding: 0 1rem;
+  margin: 0.5rem 0;
+}
+.shows__card {
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #e1e1e1;
+  margin-bottom: 0.75rem;
+  display: flex;
+  flex-direction: column;
+}
 .shows__section-title {
-  padding: 0;
+  padding: 0 1rem;
+  margin: 0.25rem 0;
+  color: #afafaf;
+}
+.shows__tickets {
+  height: 3rem;
+  font-size: 1.25rem;
+  width: 90%;
+  align-self: center;
 }/*# sourceMappingURL=shows.css.map */

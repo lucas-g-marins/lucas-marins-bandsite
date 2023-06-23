@@ -340,9 +340,18 @@ body {
     border-bottom: 2px solid colours.$secondary-silver;
   }
 
-  &__comment {
+  &__comment-content {
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-left: 1rem;
+  }
+
+  &__comment {
+    width: 90%;
     padding: 0;
+    // align-self: center;
+    margin: 0 0 0.5rem 0;
   }
 
   &__name-date-container {
@@ -353,6 +362,7 @@ body {
 
   &__name {
     font-family: "Avenir Next Bold";
+    padding: 0;
   }
 
   &__date {
