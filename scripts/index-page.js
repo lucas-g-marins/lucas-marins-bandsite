@@ -21,27 +21,7 @@ let comments = [
   },
 ];
 
-// pull comment
-
 const commentForm = document.querySelector(".conversation__form");
-
-commentForm.addEventListener("submit", function (event) {
-  event.preventDefault();
-  //   pull name
-  const pullName = event.target.name.value;
-  console.log(pullName);
-  //   pull comment
-  const pullComment = event.target.comment.value;
-  console.log(pullComment);
-  //   push values to comments array
-  const newComment = {
-    name: pullName,
-    date: "06/20/2023",
-    comment: pullComment,
-  };
-  comments.unshift(newComment);
-  console.log(comments);
-});
 
 // post comments
 comments.forEach((comment) => {
@@ -49,7 +29,9 @@ comments.forEach((comment) => {
   let commentDiv = document.createElement("div");
   commentDiv.classList.add("conversation__comment-container");
 
-  let conversationDiv = document.querySelector(".conversation");
+  let conversationDiv = document.querySelector(
+    ".conversation__comment-section"
+  );
   conversationDiv.appendChild(commentDiv);
 
   //   add div for avatar
@@ -89,4 +71,84 @@ comments.forEach((comment) => {
   commentValue.innerText = comment.comment;
   commentValue.classList.add("conversation__comment");
   contentDiv.appendChild(commentValue);
+});
+
+// PULL COMMENT
+
+commentForm.addEventListener("submit", function (event) {
+  event.preventDefault();
+  //   pull name
+  const pullName = event.target.name.value;
+  console.log(pullName);
+  //   pull comment
+  const pullComment = event.target.comment.value;
+  console.log(pullComment);
+  //   push values to comments array
+  const newComment = {
+    name: pullName,
+    date: "06/20/2023",
+    comment: pullComment,
+  };
+  comments.unshift(newComment);
+  console.log(comments);
+
+  // Remove values from input fields
+  let clearName = document.querySelector(".conversation__input");
+  clearName.value = "";
+
+  let clearComment = document.querySelector(".conversation__input--comment");
+  clearComment.value = "";
+
+  // Remove already posted comments
+  let commentsParent = document.querySelector(".conversation");
+  let postedComments = document.querySelector(".conversation__comment-section");
+  commentsParent.removeChild(postedComments);
+
+  // Post all comments from array
+  comments.forEach((comment) => {
+    // create div for comment values
+    let commentDiv = document.createElement("div");
+    commentDiv.classList.add("conversation__comment-container");
+
+    let conversationDiv = document.querySelector(".conversation");
+    conversationDiv.appendChild(commentDiv);
+
+    //   add div for avatar
+    let avatarDiv = document.createElement("div");
+    avatarDiv.classList.add("conversation__avatar-container");
+    commentDiv.appendChild(avatarDiv);
+
+    //   add avatar
+    let avatar = document.createElement("img");
+    avatar.classList.add("conversation__avatar");
+    avatarDiv.appendChild(avatar);
+
+    //   add div for name, date, and comment
+    let contentDiv = document.createElement("div");
+    contentDiv.classList.add("conversation__comment-content");
+    commentDiv.appendChild(contentDiv);
+
+    //   add div for name and date
+    let nameDateDiv = document.createElement("div");
+    nameDateDiv.classList.add("conversation__name-date-container");
+    contentDiv.appendChild(nameDateDiv);
+
+    //add name
+    let userName = document.createElement("p");
+    userName.innerText = comment.name;
+    userName.classList.add("conversation__name");
+    nameDateDiv.appendChild(userName);
+
+    // add date
+    let date = document.createElement("p");
+    date.innerText = comment.date;
+    date.classList.add("conversation__date");
+    nameDateDiv.appendChild(date);
+
+    //   add div for comment
+    let commentValue = document.createElement("p");
+    commentValue.innerText = comment.comment;
+    commentValue.classList.add("conversation__comment");
+    contentDiv.appendChild(commentValue);
+  });
 });
