@@ -481,6 +481,16 @@ button {
     padding: 2rem 0 0 2.25rem;
   }
 }
+@media (min-width: 1280px) {
+  .hero__album-title {
+    padding: 2rem 0 0 16rem;
+  }
+}
+@media (min-width: 1280px) {
+  .hero__title-music {
+    display: flex;
+  }
+}
 .hero__title {
   color: #ffffff;
   padding: 1.5rem 1rem 1rem 1rem;
@@ -500,6 +510,10 @@ button {
   .hero__title {
     padding: 3rem 2.25rem 2.25rem 6rem;
     font-size: 4.25rem;
+    padding: 0 2rem 0 16rem;
+    margin-top: 0;
+    width: 30%;
+    line-height: 4.75rem;
   }
 }
 .hero__soundcloud {
@@ -511,6 +525,13 @@ button {
   .hero__soundcloud {
     padding: 0 0 1rem 2.25rem;
     width: 60%;
+  }
+}
+@media (min-width: 1280px) {
+  .hero__soundcloud {
+    width: 30%;
+    height: 10rem;
+    padding-left: 2rem;
   }
 }
 .hero__image {
@@ -533,14 +554,55 @@ button {
 .shows {
   box-sizing: border-box;
 }
+@media (min-width: 1280px) {
+  .shows {
+    display: flex;
+  }
+}
 .shows__title {
   padding: 1.5rem 1rem 1rem 1rem;
+  width: 25%;
 }
 @media screen and (min-width: 768px) and (max-width: 1279px) {
   .shows__title {
     padding: 2.25rem 0 1.5rem 2.25rem;
     margin: 0.5rem 0 0 0;
   }
+}
+@media (min-width: 1280px) {
+  .shows__title {
+    padding: 2.25rem 0 1.5rem 2.25rem;
+    margin: 0.5rem 0 0 0;
+  }
+}
+@media (min-width: 1280px) {
+  .shows__container {
+    width: 70%;
+  }
+}
+.shows__headings-container {
+  display: none;
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .shows__headings-container {
+    display: contents;
+    display: flex;
+    width: 80%;
+    justify-content: space-evenly;
+  }
+}
+@media (min-width: 1280px) {
+  .shows__headings-container {
+    display: contents;
+    display: flex;
+    width: 80%;
+    justify-content: space-evenly;
+    padding-top: 2.25rem;
+  }
+}
+.shows__heading {
+  color: #afafaf;
+  width: 20%;
 }
 .shows__date {
   font-family: "Avenir Next Bold";
@@ -550,6 +612,13 @@ button {
 @media screen and (min-width: 768px) and (max-width: 1279px) {
   .shows__date {
     width: 20%;
+    font-family: "Avenir Next Demi";
+  }
+}
+@media (min-width: 1280px) {
+  .shows__date {
+    width: 20%;
+    font-family: "Avenir Next Demi";
   }
 }
 .shows__venue {
@@ -559,6 +628,15 @@ button {
 @media screen and (min-width: 768px) and (max-width: 1279px) {
   .shows__venue {
     width: 20%;
+    font-family: "Avenir Next Regular";
+    font-size: 1.3rem;
+  }
+}
+@media (min-width: 1280px) {
+  .shows__venue {
+    width: 20%;
+    font-family: "Avenir Next Regular";
+    font-size: 1.3rem;
   }
 }
 .shows__location {
@@ -568,6 +646,15 @@ button {
 @media screen and (min-width: 768px) and (max-width: 1279px) {
   .shows__location {
     width: 20%;
+    font-family: "Avenir Next Regular";
+    font-size: 1.3rem;
+  }
+}
+@media (min-width: 1280px) {
+  .shows__location {
+    width: 20%;
+    font-family: "Avenir Next Regular";
+    font-size: 1.3rem;
   }
 }
 .shows__card {
@@ -583,12 +670,23 @@ button {
     justify-content: space-evenly;
   }
 }
+@media (min-width: 1280px) {
+  .shows__card {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+}
 .shows__section-title {
   padding: 0 1rem;
   margin: 0.25rem 0;
   color: #afafaf;
 }
 @media screen and (min-width: 768px) and (max-width: 1279px) {
+  .shows__section-title {
+    display: none;
+  }
+}
+@media (min-width: 1280px) {
   .shows__section-title {
     display: none;
   }
@@ -600,6 +698,11 @@ button {
   align-self: center;
 }
 @media screen and (min-width: 768px) and (max-width: 1279px) {
+  .shows__tickets {
+    width: 9.5rem;
+  }
+}
+@media (min-width: 1280px) {
   .shows__tickets {
     width: 9.5rem;
   }

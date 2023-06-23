@@ -61,6 +61,16 @@
     @include tablet {
       padding: 2rem 0 0 2.25rem;
     }
+
+    @include desktop {
+      padding: 2rem 0 0 16rem;
+    }
+  }
+
+  &__title-music {
+    @include desktop {
+      display: flex;
+    }
   }
 
   &__title {
@@ -80,6 +90,10 @@
     @include desktop {
       @include desktop-heading-padding;
       font-size: 4.25rem;
+      padding: 0 2rem 0 16rem;
+      margin-top: 0;
+      width: 30%;
+      line-height: 4.75rem;
     }
   }
 
@@ -91,6 +105,12 @@
     @include tablet {
       padding: 0 0 1rem 2.25rem;
       width: 60%;
+    }
+
+    @include desktop {
+      width: 30%;
+      height: 10rem;
+      padding-left: 2rem;
     }
   }
 
@@ -113,13 +133,53 @@
 .shows {
   box-sizing: border-box;
 
+  @include desktop {
+    display: flex;
+  }
+
   &__title {
     @include mobile-heading-padding;
+    width: 25%;
 
     @include tablet {
       padding: 2.25rem 0 1.5rem 2.25rem;
       margin: 0.5rem 0 0 0;
     }
+
+    @include desktop {
+      padding: 2.25rem 0 1.5rem 2.25rem;
+      margin: 0.5rem 0 0 0;
+    }
+  }
+
+  &__container {
+    @include desktop {
+      width: 70%;
+    }
+  }
+
+  &__headings-container {
+    display: none;
+
+    @include tablet {
+      display: contents;
+      display: flex;
+      width: 80%;
+      justify-content: space-evenly;
+    }
+
+    @include desktop {
+      display: contents;
+      display: flex;
+      width: 80%;
+      justify-content: space-evenly;
+      padding-top: 2.25rem;
+    }
+  }
+
+  &__heading {
+    color: colours.$primary-silver;
+    width: 20%;
   }
 
   &__date {
@@ -129,6 +189,12 @@
 
     @include tablet {
       width: 20%;
+      font-family: "Avenir Next Demi";
+    }
+
+    @include desktop {
+      width: 20%;
+      font-family: "Avenir Next Demi";
     }
   }
 
@@ -138,6 +204,14 @@
 
     @include tablet {
       width: 20%;
+      font-family: "Avenir Next Regular";
+      font-size: 1.3rem;
+    }
+
+    @include desktop {
+      width: 20%;
+      font-family: "Avenir Next Regular";
+      font-size: 1.3rem;
     }
   }
 
@@ -147,6 +221,14 @@
 
     @include tablet {
       width: 20%;
+      font-family: "Avenir Next Regular";
+      font-size: 1.3rem;
+    }
+
+    @include desktop {
+      width: 20%;
+      font-family: "Avenir Next Regular";
+      font-size: 1.3rem;
     }
   }
 
@@ -161,6 +243,11 @@
       flex-direction: row;
       justify-content: space-evenly;
     }
+
+    @include desktop {
+      flex-direction: row;
+      justify-content: space-evenly;
+    }
   }
 
   &__section-title {
@@ -169,6 +256,10 @@
     color: colours.$primary-silver;
 
     @include tablet {
+      display: none;
+    }
+
+    @include desktop {
       display: none;
     }
   }
@@ -180,6 +271,10 @@
     align-self: center;
 
     @include tablet {
+      width: 9.5rem;
+    }
+
+    @include desktop {
       width: 9.5rem;
     }
   }
