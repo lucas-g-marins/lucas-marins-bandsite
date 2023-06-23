@@ -184,6 +184,10 @@ button {
   color: colours.$primary-white;
   background-color: colours.$bandsite-black;
   font-family: "Avenir Next Demi";
+
+  @include tablet() {
+    width: 2rem;
+  }
 }
 
 // footer

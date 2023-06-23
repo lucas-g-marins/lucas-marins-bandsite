@@ -57,6 +57,10 @@
   &__album-title {
     @include mobile-heading-padding;
     color: colours.$primary-white;
+
+    @include tablet {
+      padding: 2rem 0 0 2.25rem;
+    }
   }
 
   &__title {
@@ -67,8 +71,10 @@
     font-family: "Avenir Next Demi";
 
     @include tablet {
-      @include tablet-heading-padding;
+      padding: 0 0 0 2.25rem;
       font-size: 3.75rem;
+      margin-top: 0;
+      width: 70%;
     }
 
     @include desktop {
@@ -81,6 +87,11 @@
     height: 8rem;
     width: 90%;
     padding-left: 1rem;
+
+    @include tablet {
+      padding: 0 0 1rem 2.25rem;
+      width: 60%;
+    }
   }
 
   &__image {
@@ -104,22 +115,39 @@
 
   &__title {
     @include mobile-heading-padding;
+
+    @include tablet {
+      padding: 2.25rem 0 1.5rem 2.25rem;
+      margin: 0.5rem 0 0 0;
+    }
   }
 
   &__date {
     font-family: "Avenir Next Bold";
     padding: 0 1rem;
     margin: 0.5rem 0;
+
+    @include tablet {
+      width: 20%;
+    }
   }
 
   &__venue {
     padding: 0 1rem;
     margin: 0.5rem 0;
+
+    @include tablet {
+      width: 20%;
+    }
   }
 
   &__location {
     padding: 0 1rem;
     margin: 0.5rem 0;
+
+    @include tablet {
+      width: 20%;
+    }
   }
 
   &__card {
@@ -128,12 +156,21 @@
     margin-bottom: 0.75rem;
     display: flex;
     flex-direction: column;
+
+    @include tablet {
+      flex-direction: row;
+      justify-content: space-evenly;
+    }
   }
 
   &__section-title {
     padding: 0 1rem;
     margin: 0.25rem 0;
     color: colours.$primary-silver;
+
+    @include tablet {
+      display: none;
+    }
   }
 
   &__tickets {
@@ -141,5 +178,9 @@
     font-size: 1.25rem;
     width: 90%;
     align-self: center;
+
+    @include tablet {
+      width: 9.5rem;
+    }
   }
 }

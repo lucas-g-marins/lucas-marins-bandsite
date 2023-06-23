@@ -278,6 +278,11 @@ button {
   background-color: #323232;
   font-family: "Avenir Next Demi";
 }
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  button {
+    width: 2rem;
+  }
+}
 
 .footer {
   background-color: #323232;
@@ -471,6 +476,11 @@ button {
   padding: 1.5rem 1rem 1rem 1rem;
   color: #ffffff;
 }
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .hero__album-title {
+    padding: 2rem 0 0 2.25rem;
+  }
+}
 .hero__title {
   color: #ffffff;
   padding: 1.5rem 1rem 1rem 1rem;
@@ -480,8 +490,10 @@ button {
 }
 @media screen and (min-width: 768px) and (max-width: 1279px) {
   .hero__title {
-    padding: 3rem 2.25rem 2.25rem 2.25rem;
+    padding: 0 0 0 2.25rem;
     font-size: 3.75rem;
+    margin-top: 0;
+    width: 70%;
   }
 }
 @media (min-width: 1280px) {
@@ -494,6 +506,12 @@ button {
   height: 8rem;
   width: 90%;
   padding-left: 1rem;
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .hero__soundcloud {
+    padding: 0 0 1rem 2.25rem;
+    width: 60%;
+  }
 }
 .hero__image {
   position: absolute;
@@ -518,18 +536,39 @@ button {
 .shows__title {
   padding: 1.5rem 1rem 1rem 1rem;
 }
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .shows__title {
+    padding: 2.25rem 0 1.5rem 2.25rem;
+    margin: 0.5rem 0 0 0;
+  }
+}
 .shows__date {
   font-family: "Avenir Next Bold";
   padding: 0 1rem;
   margin: 0.5rem 0;
 }
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .shows__date {
+    width: 20%;
+  }
+}
 .shows__venue {
   padding: 0 1rem;
   margin: 0.5rem 0;
 }
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .shows__venue {
+    width: 20%;
+  }
+}
 .shows__location {
   padding: 0 1rem;
   margin: 0.5rem 0;
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .shows__location {
+    width: 20%;
+  }
 }
 .shows__card {
   padding-bottom: 1rem;
@@ -538,14 +577,30 @@ button {
   display: flex;
   flex-direction: column;
 }
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .shows__card {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+}
 .shows__section-title {
   padding: 0 1rem;
   margin: 0.25rem 0;
   color: #afafaf;
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .shows__section-title {
+    display: none;
+  }
 }
 .shows__tickets {
   height: 3rem;
   font-size: 1.25rem;
   width: 90%;
   align-self: center;
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .shows__tickets {
+    width: 9.5rem;
+  }
 }/*# sourceMappingURL=shows.css.map */

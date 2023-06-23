@@ -278,6 +278,11 @@ button {
   background-color: #323232;
   font-family: "Avenir Next Demi";
 }
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  button {
+    width: 2rem;
+  }
+}
 
 .footer {
   background-color: #323232;
@@ -684,12 +689,34 @@ body {
   overflow-x: hidden;
   box-sizing: border-box;
 }
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .conversation {
+    padding: 2rem 2.25rem 1rem 2.25rem;
+  }
+}
+@media (min-width: 1280px) {
+  .conversation {
+    padding: 2rem 2.25rem 1rem 6rem;
+  }
+}
 .conversation__post-comment-container {
   display: flex;
   width: 100%;
   margin: 0;
   border-bottom: 2px solid #e1e1e1;
   padding-bottom: 1rem;
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .conversation__post-comment-container {
+    width: 80%;
+    margin: auto;
+  }
+}
+@media (min-width: 1280px) {
+  .conversation__post-comment-container {
+    width: 70%;
+    margin: auto;
+  }
 }
 .conversation__avatar-container {
   width: 10%;
@@ -701,6 +728,24 @@ body {
   border: 0px;
   background-color: #e1e1e1;
 }
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .conversation__avatar {
+    width: 3.1rem;
+    height: 3.1rem;
+  }
+}
+@media (min-width: 1280px) {
+  .conversation__avatar {
+    width: 3.1rem;
+    height: 3.1rem;
+  }
+}
+.conversation__form {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  align-items: flex-start;
+}
 .conversation__label {
   color: #afafaf;
   font-size: 0.85rem;
@@ -709,17 +754,39 @@ body {
   height: 2.5rem;
   border-radius: 4px;
   border: 1px solid #e1e1e1;
-  width: 90%;
+  width: 95%;
   padding: 0.75rem;
   margin: 0.5rem 0;
   background-color: #fafafa;
   color: #000000;
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .conversation__input {
+    height: 3rem;
+    width: 96%;
+  }
+}
+@media (min-width: 1280px) {
+  .conversation__input {
+    height: 3rem;
+    width: 97%;
+  }
 }
 .conversation__input :focus {
   border-color: #000000;
 }
 .conversation__input--comment {
   height: 4rem;
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .conversation__input--comment {
+    height: 4rem;
+  }
+}
+@media (min-width: 1280px) {
+  .conversation__input--comment {
+    height: 6rem;
+  }
 }
 .conversation__button {
   height: 2.5rem;
@@ -734,17 +801,35 @@ body {
 .conversation__button:hover {
   background-color: #000000;
 }
-.conversation__form {
-  display: flex;
-  flex-direction: column;
-  width: 90%;
-  align-items: flex-start;
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .conversation__button {
+    width: 9.5rem;
+    align-self: flex-end;
+  }
+}
+@media (min-width: 1280px) {
+  .conversation__button {
+    width: 9.5rem;
+    align-self: flex-end;
+  }
 }
 .conversation__comment-container {
   display: flex;
   width: 100%;
   padding-top: 1rem;
   border-bottom: 2px solid #e1e1e1;
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .conversation__comment-container {
+    width: 80%;
+    margin: auto;
+  }
+}
+@media (min-width: 1280px) {
+  .conversation__comment-container {
+    width: 70%;
+    margin: auto;
+  }
 }
 .conversation__comment-content {
   width: 100%;
@@ -756,6 +841,8 @@ body {
   width: 90%;
   padding: 0;
   margin: 0 0 0.5rem 0;
+  font-size: 0.9rem;
+  line-height: 1.3rem;
 }
 .conversation__name-date-container {
   display: flex;
@@ -764,6 +851,7 @@ body {
 }
 .conversation__name {
   font-family: "Avenir Next Bold";
+  font-size: 0.91rem;
   padding: 0;
 }
 .conversation__date {

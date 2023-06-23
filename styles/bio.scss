@@ -269,12 +269,30 @@ body {
   overflow-x: hidden;
   box-sizing: border-box;
 
+  @include tablet() {
+    padding: 2rem 2.25rem 1rem 2.25rem;
+  }
+
+  @include desktop {
+    padding: 2rem 2.25rem 1rem 6rem;
+  }
+
   &__post-comment-container {
     display: flex;
     width: 100%;
     margin: 0;
     border-bottom: 2px solid colours.$secondary-silver;
     padding-bottom: 1rem;
+
+    @include tablet {
+      width: 80%;
+      margin: auto;
+    }
+
+    @include desktop {
+      width: 70%;
+      margin: auto;
+    }
   }
 
   &__avatar-container {
@@ -287,6 +305,23 @@ body {
     border-radius: 50%;
     border: 0px;
     background-color: colours.$secondary-silver;
+
+    @include tablet {
+      width: 3.1rem;
+      height: 3.1rem;
+    }
+
+    @include desktop {
+      width: 3.1rem;
+      height: 3.1rem;
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    align-items: flex-start;
   }
 
   &__label {
@@ -298,17 +333,36 @@ body {
     height: 2.5rem;
     border-radius: 4px;
     border: 1px solid colours.$secondary-silver;
-    width: 90%;
+    width: 95%;
     padding: 0.75rem;
     margin: 0.5rem 0;
     background-color: colours.$secondary-white;
     color: colours.$bandsite-darkblack;
+
+    @include tablet {
+      height: 3rem;
+      width: 96%;
+    }
+
+    @include desktop {
+      height: 3rem;
+      width: 97%;
+    }
+
     :focus {
       border-color: colours.$bandsite-darkblack;
     }
 
     &--comment {
       height: 4rem;
+
+      @include tablet {
+        height: 4rem;
+      }
+
+      @include desktop {
+        height: 6rem;
+      }
     }
   }
 
@@ -324,13 +378,16 @@ body {
     &:hover {
       background-color: colours.$bandsite-darkblack;
     }
-  }
 
-  &__form {
-    display: flex;
-    flex-direction: column;
-    width: 90%;
-    align-items: flex-start;
+    @include tablet() {
+      width: 9.5rem;
+      align-self: flex-end;
+    }
+
+    @include desktop() {
+      width: 9.5rem;
+      align-self: flex-end;
+    }
   }
 
   &__comment-container {
@@ -338,6 +395,16 @@ body {
     width: 100%;
     padding-top: 1rem;
     border-bottom: 2px solid colours.$secondary-silver;
+
+    @include tablet {
+      width: 80%;
+      margin: auto;
+    }
+
+    @include desktop {
+      width: 70%;
+      margin: auto;
+    }
   }
 
   &__comment-content {
@@ -350,8 +417,9 @@ body {
   &__comment {
     width: 90%;
     padding: 0;
-    // align-self: center;
     margin: 0 0 0.5rem 0;
+    font-size: 0.9rem;
+    line-height: 1.3rem;
   }
 
   &__name-date-container {
@@ -362,6 +430,7 @@ body {
 
   &__name {
     font-family: "Avenir Next Bold";
+    font-size: 0.91rem;
     padding: 0;
   }
 
