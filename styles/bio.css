@@ -788,6 +788,9 @@ body {
     height: 6rem;
   }
 }
+.conversation__input--error {
+  border: 1px solid #d22d2d;
+}
 .conversation__button {
   height: 2.5rem;
   width: 100%;

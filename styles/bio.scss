@@ -364,6 +364,10 @@ body {
         height: 6rem;
       }
     }
+
+    &--error {
+      border: 1px solid #d22d2d;
+    }
   }
 
   &__button {
