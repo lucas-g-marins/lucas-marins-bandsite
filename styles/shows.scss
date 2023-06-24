@@ -241,17 +241,13 @@
   }
 
   &__card {
-    padding-bottom: 1rem;
+    padding: 1rem 0;
     border-bottom: 2px solid colours.$secondary-silver;
-    margin-bottom: 0.75rem;
     display: flex;
     flex-direction: column;
     &:hover {
       background-color: colours.$secondary-white;
     }
-    // &:active {
-    //   background-color: colours.$secondary-silver;
-    // }
 
     @include tablet {
       flex-direction: row;
