@@ -117,14 +117,19 @@ commentForm.addEventListener("submit", function (event) {
     );
     commentsParent.removeChild(postedComments);
 
+    // recreate comment section div
+    let newCommentSection = document.createElement("div");
+    newCommentSection.classList.add("conversation__comment-section");
+    commentsParent.appendChild(newCommentSection);
+
     // Post all comments from array
     comments.forEach((comment) => {
       // create div for comment values
       let commentDiv = document.createElement("div");
       commentDiv.classList.add("conversation__comment-container");
 
-      let conversationDiv = document.querySelector(".conversation");
-      conversationDiv.appendChild(commentDiv);
+      // let conversationDiv = document.querySelector(".conversation");
+      newCommentSection.appendChild(commentDiv);
 
       //   add div for avatar
       let avatarDiv = document.createElement("div");

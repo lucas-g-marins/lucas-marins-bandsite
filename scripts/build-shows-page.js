@@ -103,13 +103,19 @@ for (let i = 0; i < shows.length; i++) {
 
 const showCard = document.querySelectorAll(".shows__card");
 
+let pastClick = null;
+
 showCard.forEach((card) => {
   card.addEventListener("click", function (event) {
-    if (card.classList.contains("shows__card--clicked")) {
-      card.classList.remove("shows__card--clicked");
+    if (pastClick !== null) {
+      pastClick.classList.remove("shows__card--clicked");
+      console.log(pastClick);
       event.currentTarget.classList.add("shows__card--clicked");
+      pastClick = event.currentTarget;
     } else {
       event.currentTarget.classList.add("shows__card--clicked");
+      pastClick = event.currentTarget;
+      console.log("This is the selected card" + card);
     }
   });
 });
