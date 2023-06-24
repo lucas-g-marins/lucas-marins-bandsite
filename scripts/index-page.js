@@ -23,6 +23,16 @@ let comments = [
 
 const commentForm = document.querySelector(".conversation__form");
 
+// function to set date
+
+function setDate(date) {
+  let year = date.getFullYear();
+  let month = date.getMonth() + 1;
+  let day = date.getDate();
+  let fullDate = `${month}/${day}/${year}`;
+  return fullDate;
+}
+
 // post comments
 comments.forEach((comment) => {
   // create div for comment values
@@ -83,6 +93,9 @@ commentForm.addEventListener("submit", function (event) {
   //   pull comment
   const pullComment = event.target.comment.value;
   console.log(pullComment);
+  // pull date
+  const pullDate = setDate(new Date());
+  console.log(pullDate);
 
   // check for invalid inputs
   if (pullName.length === 0) {
@@ -97,7 +110,7 @@ commentForm.addEventListener("submit", function (event) {
     //   push values to comments array
     const newComment = {
       name: pullName,
-      date: "06/20/2023",
+      date: pullDate,
       comment: pullComment,
     };
     comments.unshift(newComment);
