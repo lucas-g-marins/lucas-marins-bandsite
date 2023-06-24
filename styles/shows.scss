@@ -63,7 +63,7 @@
     }
 
     @include desktop {
-      padding: 2rem 0 0 16rem;
+      padding: 2rem 0 0 14rem;
     }
   }
 
@@ -90,7 +90,7 @@
     @include desktop {
       @include desktop-heading-padding;
       font-size: 4.25rem;
-      padding: 0 2rem 0 16rem;
+      padding: 0 2rem 0 14rem;
       margin-top: 0;
       width: 30%;
       line-height: 4.75rem;
@@ -147,7 +147,7 @@
     }
 
     @include desktop {
-      padding: 2.25rem 0 1.5rem 16rem;
+      padding: 2.25rem 0 1.5rem 14rem;
       margin: 0.5rem 0 0 0;
       font-size: 3.5rem;
       font-family: "Avenir Next Demi";
@@ -159,6 +159,7 @@
       width: 60%;
       display: flex;
       flex-direction: column;
+      margin-bottom: 1rem;
     }
   }
 
@@ -248,9 +249,9 @@
     &:hover {
       background-color: colours.$secondary-white;
     }
-    &:active {
-      background-color: colours.$secondary-silver;
-    }
+    // &:active {
+    //   background-color: colours.$secondary-silver;
+    // }
 
     @include tablet {
       flex-direction: row;
@@ -263,6 +264,10 @@
       justify-content: space-evenly;
       margin: 0;
       padding: 1rem 0;
+    }
+
+    &--clicked {
+      background-color: colours.$secondary-silver;
     }
   }
 

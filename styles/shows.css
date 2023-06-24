@@ -483,7 +483,7 @@ button {
 }
 @media (min-width: 1280px) {
   .hero__album-title {
-    padding: 2rem 0 0 16rem;
+    padding: 2rem 0 0 14rem;
   }
 }
 @media (min-width: 1280px) {
@@ -510,7 +510,7 @@ button {
   .hero__title {
     padding: 3rem 2.25rem 2.25rem 6rem;
     font-size: 4.25rem;
-    padding: 0 2rem 0 16rem;
+    padding: 0 2rem 0 14rem;
     margin-top: 0;
     width: 30%;
     line-height: 4.75rem;
@@ -571,7 +571,7 @@ button {
 }
 @media (min-width: 1280px) {
   .shows__title {
-    padding: 2.25rem 0 1.5rem 16rem;
+    padding: 2.25rem 0 1.5rem 14rem;
     margin: 0.5rem 0 0 0;
     font-size: 3.5rem;
     font-family: "Avenir Next Demi";
@@ -582,6 +582,7 @@ button {
     width: 60%;
     display: flex;
     flex-direction: column;
+    margin-bottom: 1rem;
   }
 }
 .shows__headings-container {
@@ -674,9 +675,6 @@ button {
 .shows__card:hover {
   background-color: #fafafa;
 }
-.shows__card:active {
-  background-color: #e1e1e1;
-}
 @media screen and (min-width: 768px) and (max-width: 1279px) {
   .shows__card {
     flex-direction: row;
@@ -691,6 +689,9 @@ button {
     margin: 0;
     padding: 1rem 0;
   }
+}
+.shows__card--clicked {
+  background-color: #e1e1e1;
 }
 .shows__section-title {
   padding: 0 1rem;

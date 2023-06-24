@@ -98,3 +98,18 @@ for (let i = 0; i < shows.length; i++) {
 
   newDiv.appendChild(ticketButton);
 }
+
+// change show styling when clicked
+
+const showCard = document.querySelectorAll(".shows__card");
+
+showCard.forEach((card) => {
+  card.addEventListener("click", function (event) {
+    if (card.classList.contains("shows__card--clicked")) {
+      card.classList.remove("shows__card--clicked");
+      event.currentTarget.classList.add("shows__card--clicked");
+    } else {
+      event.currentTarget.classList.add("shows__card--clicked");
+    }
+  });
+});
