@@ -42,13 +42,13 @@ h2 {
 }
 @media screen and (min-width: 768px) and (max-width: 1279px) {
   h2 {
-    font-size: 2.25rem;
+    font-size: 2.5rem;
     line-height: 2rem;
   }
 }
 @media (min-width: 1280px) {
   h2 {
-    font-size: 2.25rem;
+    font-size: 2.5rem;
     line-height: 2rem;
   }
 }
@@ -249,11 +249,20 @@ body {
   }
 }
 
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  input {
+    font-size: 0.95rem;
+  }
+}
+@media (min-width: 1280px) {
+  input {
+    font-size: 0.95rem;
+  }
+}
 input::-moz-placeholder {
   color: #000000;
   font-family: "Avenir Next Regular";
 }
-
 input::placeholder {
   color: #000000;
   font-family: "Avenir Next Regular";
@@ -262,10 +271,20 @@ input::placeholder {
 textarea {
   font-family: "Avenir Next Regular";
 }
-textarea ::-moz-placeholder {
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  textarea {
+    font-size: 0.95rem;
+  }
+}
+@media (min-width: 1280px) {
+  textarea {
+    font-size: 0.95rem;
+  }
+}
+textarea::-moz-placeholder {
   color: #000000;
 }
-textarea ::placeholder {
+textarea::placeholder {
   color: #000000;
 }
 
@@ -407,7 +426,7 @@ button {
   }
 }
 .footer__copy {
-  color: #fafafa;
+  color: #e1e1e1;
   padding: 0 1rem;
 }
 .footer__copy--copyright {
@@ -688,15 +707,16 @@ body {
   margin: 0;
   overflow-x: hidden;
   box-sizing: border-box;
+  padding-bottom: 2.25rem;
 }
 @media screen and (min-width: 768px) and (max-width: 1279px) {
   .conversation {
-    padding: 2rem 2.25rem 1rem 2.25rem;
+    padding: 2rem 2.25rem 2.25rem 2.25rem;
   }
 }
 @media (min-width: 1280px) {
   .conversation {
-    padding: 2rem 2.25rem 1rem 6rem;
+    padding: 2rem 2.25rem 2.25rem 6rem;
   }
 }
 .conversation__post-comment-container {
@@ -714,12 +734,17 @@ body {
 }
 @media (min-width: 1280px) {
   .conversation__post-comment-container {
-    width: 70%;
+    width: 50%;
     margin: auto;
   }
 }
 .conversation__avatar-container {
-  width: 10%;
+  width: 12%;
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .conversation__avatar-container {
+    width: 10%;
+  }
 }
 .conversation__avatar {
   width: 2.5rem;
@@ -727,24 +752,38 @@ body {
   border-radius: 50%;
   border: 0px;
   background-color: #e1e1e1;
+  margin: auto;
 }
 @media screen and (min-width: 768px) and (max-width: 1279px) {
   .conversation__avatar {
-    width: 3.1rem;
-    height: 3.1rem;
+    width: 3.5rem;
+    height: 3.5rem;
   }
 }
 @media (min-width: 1280px) {
   .conversation__avatar {
-    width: 3.1rem;
-    height: 3.1rem;
+    width: 3.5rem;
+    height: 3.5rem;
   }
+}
+.conversation__avatar--poster {
+  margin-top: 1.5rem;
 }
 .conversation__form {
   display: flex;
   flex-direction: column;
-  width: 90%;
+  width: 80%;
   align-items: flex-start;
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .conversation__form {
+    width: 90%;
+  }
+}
+@media (min-width: 1280px) {
+  .conversation__form {
+    width: 90%;
+  }
 }
 .conversation__label {
   color: #afafaf;
@@ -762,13 +801,13 @@ body {
 }
 @media screen and (min-width: 768px) and (max-width: 1279px) {
   .conversation__input {
-    height: 3rem;
+    height: 2.5rem;
     width: 96%;
   }
 }
 @media (min-width: 1280px) {
   .conversation__input {
-    height: 3rem;
+    height: 2.5rem;
     width: 97%;
   }
 }
@@ -830,7 +869,7 @@ body {
 }
 @media (min-width: 1280px) {
   .conversation__comment-container {
-    width: 70%;
+    width: 50%;
     margin: auto;
   }
 }
@@ -847,6 +886,18 @@ body {
   font-size: 0.9rem;
   line-height: 1.3rem;
 }
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .conversation__comment {
+    font-size: 1rem;
+    line-height: 1.4rem;
+  }
+}
+@media (min-width: 1280px) {
+  .conversation__comment {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}
 .conversation__name-date-container {
   display: flex;
   justify-content: space-between;
@@ -856,6 +907,11 @@ body {
   font-family: "Avenir Next Bold";
   font-size: 0.91rem;
   padding: 0;
+}
+@media (min-width: 1280px) {
+  .conversation__name {
+    font-size: 1rem;
+  }
 }
 .conversation__date {
   color: #afafaf;

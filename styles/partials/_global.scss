@@ -162,14 +162,31 @@ body {
 
 // input
 
-input::placeholder {
-  color: colours.$bandsite-darkblack;
-  font-family: "Avenir Next Regular";
+input {
+  @include tablet {
+    font-size: 0.95rem;
+  }
+
+  @include desktop {
+    font-size: 0.95rem;
+  }
+  &::placeholder {
+    color: colours.$bandsite-darkblack;
+    font-family: "Avenir Next Regular";
+  }
 }
 
 textarea {
   font-family: "Avenir Next Regular";
-  ::placeholder {
+  @include tablet {
+    font-size: 0.95rem;
+  }
+
+  @include desktop {
+    font-size: 0.95rem;
+  }
+
+  &::placeholder {
     color: colours.$bandsite-darkblack;
   }
 }
@@ -307,7 +324,7 @@ button {
   }
 
   &__copy {
-    color: colours.$secondary-white;
+    color: colours.$secondary-silver;
     padding: 0 1rem;
     &--copyright {
       margin-bottom: 0;

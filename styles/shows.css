@@ -42,13 +42,13 @@ h2 {
 }
 @media screen and (min-width: 768px) and (max-width: 1279px) {
   h2 {
-    font-size: 2.25rem;
+    font-size: 2.5rem;
     line-height: 2rem;
   }
 }
 @media (min-width: 1280px) {
   h2 {
-    font-size: 2.25rem;
+    font-size: 2.5rem;
     line-height: 2rem;
   }
 }
@@ -249,11 +249,20 @@ body {
   }
 }
 
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  input {
+    font-size: 0.95rem;
+  }
+}
+@media (min-width: 1280px) {
+  input {
+    font-size: 0.95rem;
+  }
+}
 input::-moz-placeholder {
   color: #000000;
   font-family: "Avenir Next Regular";
 }
-
 input::placeholder {
   color: #000000;
   font-family: "Avenir Next Regular";
@@ -262,10 +271,20 @@ input::placeholder {
 textarea {
   font-family: "Avenir Next Regular";
 }
-textarea ::-moz-placeholder {
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  textarea {
+    font-size: 0.95rem;
+  }
+}
+@media (min-width: 1280px) {
+  textarea {
+    font-size: 0.95rem;
+  }
+}
+textarea::-moz-placeholder {
   color: #000000;
 }
-textarea ::placeholder {
+textarea::placeholder {
   color: #000000;
 }
 
@@ -407,7 +426,7 @@ button {
   }
 }
 .footer__copy {
-  color: #fafafa;
+  color: #e1e1e1;
   padding: 0 1rem;
 }
 .footer__copy--copyright {
@@ -553,10 +572,17 @@ button {
 
 .shows {
   box-sizing: border-box;
+  padding-bottom: 2.25rem;
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .shows {
+    padding-bottom: 2.25rem;
+  }
 }
 @media (min-width: 1280px) {
   .shows {
     display: flex;
+    padding-bottom: 2.25rem;
   }
 }
 .shows__title {
@@ -565,13 +591,13 @@ button {
 }
 @media screen and (min-width: 768px) and (max-width: 1279px) {
   .shows__title {
-    padding: 2.25rem 0 1.5rem 2.25rem;
+    padding: 3rem 0 1.5rem 2.25rem;
     margin: 0.5rem 0 0 0;
   }
 }
 @media (min-width: 1280px) {
   .shows__title {
-    padding: 2.25rem 2rem 1.5rem 12rem;
+    padding: 3rem 2rem 1.5rem 12rem;
     margin: 0.5rem 0 0 0;
     font-size: 3.5rem;
     font-family: "Avenir Next Demi";
@@ -602,13 +628,19 @@ button {
     display: flex;
     width: 80%;
     justify-content: space-around;
-    padding-top: 2.25rem;
+    padding-top: 4rem;
   }
 }
 .shows__heading {
   color: #afafaf;
   width: 20%;
-  padding: 0 0 2rem 0;
+  padding: 0 0 1rem 0;
+  font-size: 0.9rem;
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .shows__heading {
+    padding-bottom: 0.25rem;
+  }
 }
 .shows__date {
   font-family: "Avenir Next Bold";
@@ -637,7 +669,7 @@ button {
   .shows__venue {
     width: 20%;
     font-family: "Avenir Next Regular";
-    font-size: 1.25rem;
+    font-size: 1.2rem;
   }
 }
 @media (min-width: 1280px) {
@@ -655,7 +687,7 @@ button {
   .shows__location {
     width: 20%;
     font-family: "Avenir Next Regular";
-    font-size: 1.25rem;
+    font-size: 1.2rem;
   }
 }
 @media (min-width: 1280px) {

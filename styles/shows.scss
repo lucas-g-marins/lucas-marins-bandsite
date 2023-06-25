@@ -132,9 +132,15 @@
 
 .shows {
   box-sizing: border-box;
+  padding-bottom: 2.25rem;
+
+  @include tablet {
+    padding-bottom: 2.25rem;
+  }
 
   @include desktop {
     display: flex;
+    padding-bottom: 2.25rem;
   }
 
   &__title {
@@ -142,12 +148,12 @@
     width: 15%;
 
     @include tablet {
-      padding: 2.25rem 0 1.5rem 2.25rem;
+      padding: 3rem 0 1.5rem 2.25rem;
       margin: 0.5rem 0 0 0;
     }
 
     @include desktop {
-      padding: 2.25rem 2rem 1.5rem 12rem;
+      padding: 3rem 2rem 1.5rem 12rem;
       margin: 0.5rem 0 0 0;
       font-size: 3.5rem;
       font-family: "Avenir Next Demi";
@@ -178,14 +184,18 @@
       display: flex;
       width: 80%;
       justify-content: space-around;
-      padding-top: 2.25rem;
+      padding-top: 4rem;
     }
   }
 
   &__heading {
     color: colours.$primary-silver;
     width: 20%;
-    padding: 0 0 2rem 0;
+    padding: 0 0 1rem 0;
+    font-size: 0.9rem;
+    @include tablet {
+      padding-bottom: 0.25rem;
+    }
   }
 
   &__date {
@@ -213,7 +223,7 @@
     @include tablet {
       width: 20%;
       font-family: "Avenir Next Regular";
-      font-size: 1.25rem;
+      font-size: 1.2rem;
     }
 
     @include desktop {
@@ -230,7 +240,7 @@
     @include tablet {
       width: 20%;
       font-family: "Avenir Next Regular";
-      font-size: 1.25rem;
+      font-size: 1.2rem;
     }
 
     @include desktop {

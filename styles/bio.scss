@@ -268,13 +268,14 @@ body {
   margin: 0;
   overflow-x: hidden;
   box-sizing: border-box;
+  padding-bottom: 2.25rem;
 
   @include tablet() {
-    padding: 2rem 2.25rem 1rem 2.25rem;
+    padding: 2rem 2.25rem 2.25rem 2.25rem;
   }
 
   @include desktop {
-    padding: 2rem 2.25rem 1rem 6rem;
+    padding: 2rem 2.25rem 2.25rem 6rem;
   }
 
   &__post-comment-container {
@@ -290,13 +291,17 @@ body {
     }
 
     @include desktop {
-      width: 70%;
+      width: 50%;
       margin: auto;
     }
   }
 
   &__avatar-container {
-    width: 10%;
+    width: 12%;
+
+    @include tablet {
+      width: 10%;
+    }
   }
 
   &__avatar {
@@ -305,23 +310,36 @@ body {
     border-radius: 50%;
     border: 0px;
     background-color: colours.$secondary-silver;
+    margin: auto;
 
     @include tablet {
-      width: 3.1rem;
-      height: 3.1rem;
+      width: 3.5rem;
+      height: 3.5rem;
     }
 
     @include desktop {
-      width: 3.1rem;
-      height: 3.1rem;
+      width: 3.5rem;
+      height: 3.5rem;
+    }
+
+    &--poster {
+      margin-top: 1.5rem;
     }
   }
 
   &__form {
     display: flex;
     flex-direction: column;
-    width: 90%;
+    width: 80%;
     align-items: flex-start;
+
+    @include tablet {
+      width: 90%;
+    }
+
+    @include desktop {
+      width: 90%;
+    }
   }
 
   &__label {
@@ -340,12 +358,12 @@ body {
     color: colours.$bandsite-darkblack;
 
     @include tablet {
-      height: 3rem;
+      height: 2.5rem;
       width: 96%;
     }
 
     @include desktop {
-      height: 3rem;
+      height: 2.5rem;
       width: 97%;
     }
 
@@ -406,7 +424,7 @@ body {
     }
 
     @include desktop {
-      width: 70%;
+      width: 50%;
       margin: auto;
     }
   }
@@ -424,6 +442,16 @@ body {
     margin: 0 0 0.5rem 0;
     font-size: 0.9rem;
     line-height: 1.3rem;
+
+    @include tablet {
+      font-size: 1rem;
+      line-height: 1.4rem;
+    }
+
+    @include desktop {
+      font-size: 1rem;
+      line-height: 1.5rem;
+    }
   }
 
   &__name-date-container {
@@ -436,6 +464,10 @@ body {
     font-family: "Avenir Next Bold";
     font-size: 0.91rem;
     padding: 0;
+
+    @include desktop {
+      font-size: 1rem;
+    }
   }
 
   &__date {
