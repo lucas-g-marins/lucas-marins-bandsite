@@ -33,55 +33,59 @@ function setDate(date) {
   return fullDate;
 }
 
-// post comments
-comments.forEach((comment) => {
-  // create div for comment values
-  let commentDiv = document.createElement("div");
-  commentDiv.classList.add("conversation__comment-container");
+// function for posting comments from array
+function displayComment() {
+  comments.forEach((comment) => {
+    // create div for comment values
+    let commentDiv = document.createElement("div");
+    commentDiv.classList.add("conversation__comment-container");
 
-  let conversationDiv = document.querySelector(
-    ".conversation__comment-section"
-  );
-  conversationDiv.appendChild(commentDiv);
+    let conversationDiv = document.querySelector(
+      ".conversation__comment-section"
+    );
+    conversationDiv.appendChild(commentDiv);
 
-  //   add div for avatar
-  let avatarDiv = document.createElement("div");
-  avatarDiv.classList.add("conversation__avatar-container");
-  commentDiv.appendChild(avatarDiv);
+    //   add div for avatar
+    let avatarDiv = document.createElement("div");
+    avatarDiv.classList.add("conversation__avatar-container");
+    commentDiv.appendChild(avatarDiv);
 
-  //   add avatar
-  let avatar = document.createElement("img");
-  avatar.classList.add("conversation__avatar");
-  avatarDiv.appendChild(avatar);
+    //   add avatar
+    let avatar = document.createElement("img");
+    avatar.classList.add("conversation__avatar");
+    avatarDiv.appendChild(avatar);
 
-  //   add div for name, date, and comment
-  let contentDiv = document.createElement("div");
-  contentDiv.classList.add("conversation__comment-content");
-  commentDiv.appendChild(contentDiv);
+    //   add div for name, date, and comment
+    let contentDiv = document.createElement("div");
+    contentDiv.classList.add("conversation__comment-content");
+    commentDiv.appendChild(contentDiv);
 
-  //   add div for name and date
-  let nameDateDiv = document.createElement("div");
-  nameDateDiv.classList.add("conversation__name-date-container");
-  contentDiv.appendChild(nameDateDiv);
+    //   add div for name and date
+    let nameDateDiv = document.createElement("div");
+    nameDateDiv.classList.add("conversation__name-date-container");
+    contentDiv.appendChild(nameDateDiv);
 
-  //add name
-  let userName = document.createElement("p");
-  userName.innerText = comment.name;
-  userName.classList.add("conversation__name");
-  nameDateDiv.appendChild(userName);
+    //add name
+    let userName = document.createElement("p");
+    userName.innerText = comment.name;
+    userName.classList.add("conversation__name");
+    nameDateDiv.appendChild(userName);
 
-  // add date
-  let date = document.createElement("p");
-  date.innerText = comment.date;
-  date.classList.add("conversation__date");
-  nameDateDiv.appendChild(date);
+    // add date
+    let date = document.createElement("p");
+    date.innerText = comment.date;
+    date.classList.add("conversation__date");
+    nameDateDiv.appendChild(date);
 
-  //   add div for comment
-  let commentValue = document.createElement("p");
-  commentValue.innerText = comment.comment;
-  commentValue.classList.add("conversation__comment");
-  contentDiv.appendChild(commentValue);
-});
+    //   add div for comment
+    let commentValue = document.createElement("p");
+    commentValue.innerText = comment.comment;
+    commentValue.classList.add("conversation__comment");
+    contentDiv.appendChild(commentValue);
+  });
+}
+
+displayComment();
 
 // PULL COMMENT
 
@@ -136,51 +140,6 @@ commentForm.addEventListener("submit", function (event) {
     commentsParent.appendChild(newCommentSection);
 
     // Post all comments from array
-    comments.forEach((comment) => {
-      // create div for comment values
-      let commentDiv = document.createElement("div");
-      commentDiv.classList.add("conversation__comment-container");
-
-      // let conversationDiv = document.querySelector(".conversation");
-      newCommentSection.appendChild(commentDiv);
-
-      //   add div for avatar
-      let avatarDiv = document.createElement("div");
-      avatarDiv.classList.add("conversation__avatar-container");
-      commentDiv.appendChild(avatarDiv);
-
-      //   add avatar
-      let avatar = document.createElement("img");
-      avatar.classList.add("conversation__avatar");
-      avatarDiv.appendChild(avatar);
-
-      //   add div for name, date, and comment
-      let contentDiv = document.createElement("div");
-      contentDiv.classList.add("conversation__comment-content");
-      commentDiv.appendChild(contentDiv);
-
-      //   add div for name and date
-      let nameDateDiv = document.createElement("div");
-      nameDateDiv.classList.add("conversation__name-date-container");
-      contentDiv.appendChild(nameDateDiv);
-
-      //add name
-      let userName = document.createElement("p");
-      userName.innerText = comment.name;
-      userName.classList.add("conversation__name");
-      nameDateDiv.appendChild(userName);
-
-      // add date
-      let date = document.createElement("p");
-      date.innerText = comment.date;
-      date.classList.add("conversation__date");
-      nameDateDiv.appendChild(date);
-
-      //   add div for comment
-      let commentValue = document.createElement("p");
-      commentValue.innerText = comment.comment;
-      commentValue.classList.add("conversation__comment");
-      contentDiv.appendChild(commentValue);
-    });
+    displayComment();
   }
 });
