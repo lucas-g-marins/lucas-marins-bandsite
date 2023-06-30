@@ -1,3 +1,9 @@
+// API
+
+const getKey = axios.get("https://project-1-api.herokuapp.com/register");
+
+const apiKey = "fecf2746-0abe-4230-8b5d-8e971429f395";
+
 // array of objects for comments
 
 let comments = [
