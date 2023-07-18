@@ -13,42 +13,33 @@ showsURL.then((shows) => {
   console.log(showsData);
 
   postShows(showsData);
+
+  // select all show cards
+
+  const showCard = document.querySelectorAll(".shows__card");
+
+  let pastClick = null;
+
+  // change show styling when clicked
+
+  showCard.forEach((card) => {
+    card.addEventListener("click", function (event) {
+      if (pastClick !== null) {
+        pastClick.classList.remove("shows__card--clicked");
+        console.log(pastClick);
+        event.currentTarget.classList.add("shows__card--clicked");
+        pastClick = event.currentTarget;
+      } else {
+        event.currentTarget.classList.add("shows__card--clicked");
+        pastClick = event.currentTarget;
+        console.log("This is the selected card" + card);
+      }
+    });
+  });
 });
-
-// list of upcoming shows
-
-// let shows = [
-//   {
-//     Date: "Mon Sept 06 2021",
-//     Venue: "Ronald Lane",
-//     Location: "San Francisco, CA",
-//   },
-//   {
-//     Date: "Tue Sept 21 2021",
-//     Venue: "Pier 2 East",
-//     Location: "San Francisco, CA",
-//   },
-//   {
-//     Date: "Fri Oct 15 2021",
-//     Venue: "View Lounge",
-//     Location: "San Francisco, CA",
-//   },
-//   {
-//     Date: "Sat Nov 6 2021",
-//     Venue: "Hyatt Agency",
-//     Location: "San Francisco, CA",
-//   },
-//   {
-//     Date: "Fri Nov 26 2021",
-//     Venue: "Moscow Center",
-//     Location: "San Francisco, CA",
-//   },
-//   {
-//     Date: "Wed Dec 15 2021",
-//     Venue: "Press Club",
-//     Location: "San Francisco, CA",
-//   },
-// ];
+showsURL.catch((error) => {
+  console.log(error);
+});
 
 // loop for adding in shows
 
@@ -117,24 +108,3 @@ function postShows(showsData) {
     newDiv.appendChild(ticketButton);
   });
 }
-
-// change show styling when clicked
-
-const showCard = document.querySelectorAll(".shows__card");
-
-let pastClick = null;
-
-showCard.forEach((card) => {
-  card.addEventListener("click", function (event) {
-    if (pastClick !== null) {
-      pastClick.classList.remove("shows__card--clicked");
-      console.log(pastClick);
-      event.currentTarget.classList.add("shows__card--clicked");
-      pastClick = event.currentTarget;
-    } else {
-      event.currentTarget.classList.add("shows__card--clicked");
-      pastClick = event.currentTarget;
-      console.log("This is the selected card" + card);
-    }
-  });
-});
