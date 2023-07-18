@@ -12,10 +12,14 @@ const commentsURL = axios.get(
 commentsURL.then((comments) => {
   const commentsData = comments.data;
   console.log(commentsData);
+  // sort comments by date
+  const sortComments = commentsData.sort((a, b) => {
+    return b.timestamp - a.timestamp;
+  });
 
   // post comments onto page
 
-  displayComment(commentsData);
+  displayComment(sortComments);
 });
 commentsURL.catch((error) => {
   console.log(error);
