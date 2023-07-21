@@ -151,9 +151,6 @@ commentForm.addEventListener("submit", function (event) {
   //   pull comment
   const pullComment = event.target.comment.value;
   console.log(pullComment);
-  // pull date
-  // const pullDate = setDate(new Date());
-  // console.log(pullDate);
 
   // check for invalid inputs
   if (pullName.length === 0) {
@@ -165,6 +162,13 @@ commentForm.addEventListener("submit", function (event) {
     commentInput.classList.add("conversation__input--error");
     return false;
   } else {
+    // remove error class
+    let allErrors = document.querySelectorAll(".conversation__input--error");
+    console.log(allErrors);
+    allErrors.forEach((input) => {
+      input.classList.remove("conversation__input--error");
+    });
+
     // post comment to api
 
     const newComment = axios.post(
@@ -184,5 +188,12 @@ commentForm.addEventListener("submit", function (event) {
     newComment.catch((error) => {
       console.log(error);
     });
+
+    // remove values from fields
+    let clearName = document.querySelector(".conversation__input");
+    clearName.value = "";
+
+    let clearComment = document.querySelector(".conversation__input--comment");
+    clearComment.value = "";
   }
 });
