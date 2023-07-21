@@ -41,6 +41,38 @@ showsURL.catch((error) => {
   console.log(error);
 });
 
+// arryay for dates
+
+const dayNames = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+const monthNames = [
+  "Jan",
+  "Feb",
+  "March",
+  "April",
+  "May",
+  "June",
+  "July",
+  "Aug",
+  "Sept",
+  "Oct",
+  "Nov",
+  "Dec",
+];
+
+// change timestamp to readable date
+
+function setDate(date) {
+  let newDate = new Date(date);
+  let year = newDate.getFullYear();
+  let month = newDate.getMonth();
+  let monthName = monthNames[month];
+  let day = newDate.getDate() + 1;
+  let dayOfWeek = newDate.getDay();
+  let dayName = dayNames[dayOfWeek];
+  let fullDate = `${dayName} ${monthName} ${day} ${year}`;
+  return fullDate;
+}
+
 // loop for adding in shows
 
 function postShows(showsData) {
@@ -63,7 +95,7 @@ function postShows(showsData) {
 
     let showDate = document.createElement("h3");
     showDate.classList.add("shows__date");
-    showDate.innerText = show.date;
+    showDate.innerText = setDate(show.date);
 
     newDiv.appendChild(showDate);
 
