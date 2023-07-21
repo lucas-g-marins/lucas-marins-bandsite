@@ -29,13 +29,14 @@ const commentForm = document.querySelector(".conversation__form");
 
 // function to set date
 
-// function setDate(date) {
-//   let year = date.getFullYear();
-//   let month = date.getMonth() + 1;
-//   let day = date.getDate();
-//   let fullDate = `${month}/${day}/${year}`;
-//   return fullDate;
-// }
+function setDate(date) {
+  let newDate = new Date(date);
+  let year = newDate.getFullYear();
+  let month = newDate.getMonth() + 1;
+  let day = newDate.getDate();
+  let fullDate = `${month}/${day}/${year}`;
+  return fullDate;
+}
 
 // function for posting comments from array
 function displayComment(commentsData) {
@@ -77,7 +78,7 @@ function displayComment(commentsData) {
 
     // add date
     let date = document.createElement("p");
-    date.innerText = comment.timestamp;
+    date.innerText = setDate(comment.timestamp);
     date.classList.add("conversation__date");
     nameDateDiv.appendChild(date);
 
@@ -127,7 +128,7 @@ function postSingleComment(comment) {
 
   // add date
   let date = document.createElement("p");
-  date.innerText = comment.timestamp;
+  date.innerText = setDate(comment.timestamp);
   date.classList.add("conversation__date");
   nameDateDiv.appendChild(date);
 
@@ -164,65 +165,7 @@ commentForm.addEventListener("submit", function (event) {
     commentInput.classList.add("conversation__input--error");
     return false;
   } else {
-    //   push values to comments array
-    // const newComment = {
-    //   name: pullName,
-    //   date: pullDate,
-    //   comment: pullComment,
-    // };
-    // comments.unshift(newComment);
-    // console.log(comments);
-
-    // const newComment = axios.post(
-    //   `https://project-1-api.herokuapp.com/comments?api_key=${apiKey}`,
-    //   {
-    //     name: pullName,
-    //     comment: pullComment,
-    //   }
-    // );
-    // newComment.then((comments) => {
-    //   const commentsData = comments.data;
-    //   console.log(commentsData);
-
-    //   // post comments onto page
-
-    //   displayComment(commentsData);
-    // });
-    // newComment.catch((error) => {
-    //   console.log(error);
-    // });
-
-    // Remove values from input fields
-    // let clearName = document.querySelector(".conversation__input");
-    // clearName.value = "";
-
-    // let clearComment = document.querySelector(".conversation__input--comment");
-    // clearComment.value = "";
-
-    // // Remove already posted comments
-    // let commentsParent = document.querySelector(".conversation");
-    // let postedComments = document.querySelector(
-    //   ".conversation__comment-section"
-    // );
-    // commentsParent.removeChild(postedComments);
-
-    // // recreate comment section div
-    // let newCommentSection = document.createElement("div");
-    // newCommentSection.classList.add("conversation__comment-section");
-    // commentsParent.appendChild(newCommentSection);
-
-    // Post all comments from array
-    // commentsURL.then((comments) => {
-    //   const commentsData = comments.data;
-    //   console.log(commentsData);
-
-    //   // post comments onto page
-
-    //   displayComment(commentsData);
-    // });
-    // commentsURL.catch((error) => {
-    //   console.log(error);
-    // });
+    // post comment to api
 
     const newComment = axios.post(
       `https://project-1-api.herokuapp.com/comments?api_key=${apiKey}`,
@@ -233,14 +176,7 @@ commentForm.addEventListener("submit", function (event) {
     );
     newComment.then((result) => {
       console.log(result);
-      // commentsURL.then((comments) => {
-      //   const commentsData = comments.data;
-      //   console.log(commentsData);
-
-      //   // post comments onto page
-
-      //   displayComment(commentsData);
-      // });
+      // post comment to page
       const newCommentData = result.data;
       console.log(newCommentData);
       postSingleComment(newCommentData);
